@@ -17,7 +17,7 @@ if(isset($_GET['pro_id'])){
     
     $get_product = "select * from products where product_id='$product_id'";
     
-    $run_product = mysqli_query($con,$get_product);
+    $run_product = mysqli_query($conn,$get_product);
     
     $row_products = mysqli_fetch_array($run_product);
     
@@ -38,6 +38,7 @@ if(isset($_GET['pro_id'])){
     $pro_img3 = $row_products['product_img3'];
         
     $pro_label = $row_products['product_label'];
+    if (isset($_POST['Register']))
 
     if($pro_label == ""){
 
@@ -58,7 +59,7 @@ if(isset($_GET['pro_id'])){
     
     $get_p_cat = "select * from product_categories where p_cat_id='$p_cat_id'";
     
-    $run_p_cat = mysqli_query($con,$get_p_cat);
+    $run_p_cat = mysqli_query($conn,$get_p_cat);
     
     $row_p_cat = mysqli_fetch_array($run_p_cat);
     
@@ -467,7 +468,7 @@ if(isset($_GET['pro_id'])){
                    
                     $get_products = "select * from products order by rand() LIMIT 0,3";
                    
-                    $run_products = mysqli_query($con,$get_products);
+                    $run_products = mysqli_query($conn,$get_products);
                    
                    while($row_products=mysqli_fetch_array($run_products)){
                        

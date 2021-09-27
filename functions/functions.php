@@ -416,7 +416,7 @@ function getProducts(){
         
         $pro_price = $row_products['product_price'];
 
-        $pro_sale_price = $row_products['product_sale'];
+        //$pro_sale_price = $row_products['product_sale'];
         
         $pro_img1 = $row_products['product_img1'];
         
