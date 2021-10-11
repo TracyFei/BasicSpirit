@@ -153,6 +153,9 @@ include("functions/functions.php");
                        <li class="<?php if($active=='Contact') echo"active"; ?>">
                            <a href="contact.php">Contact Us</a>
                        </li>
+                       <li class="<?php if($active=='aboutUs') echo"active"; ?>">
+                           <a href="aboutUs.php">About Us</a>
+                       </li>
                        
                    </ul><!-- nav navbar-nav left Finish -->
                    
