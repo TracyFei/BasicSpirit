@@ -27,7 +27,7 @@ if(isset($_GET['pro_id'])){
     
     $pro_price = $row_products['product_price'];
 
-    $pro_sale_price = $row_products['product_sale'];
+    //$pro_sale_price = $row_products['product_sale'];
     
     $pro_desc = $row_products['product_desc'];
     
@@ -37,7 +37,7 @@ if(isset($_GET['pro_id'])){
     
     $pro_img3 = $row_products['product_img3'];
         
-    $pro_label = $row_products['product_label'];
+    //$pro_label = $row_products['product_label'];
     if (isset($_POST['Register']))
 
     if($pro_label == ""){
@@ -326,7 +326,7 @@ if(isset($_GET['pro_id'])){
                            </div><!-- carousel slide Finish -->
                        </div><!-- mainImage Finish -->
 
-                           <?php echo $product_label; ?>
+                           <?php //echo $product_label; ?>
 
                    </div><!-- col-sm-6 Finish -->
                    
@@ -478,11 +478,11 @@ if(isset($_GET['pro_id'])){
                     
                     $pro_price = $row_products['product_price'];
             
-                    $pro_sale_price = $row_products['product_sale'];
+                    //$pro_sale_price = $row_products['product_sale'];
                     
                     $pro_img1 = $row_products['product_img1'];
                     
-                    $pro_label = $row_products['product_label'];
+                    //$pro_label = $row_products['product_label'];
                     
                     $manufacturer_id = $row_products['manufacturer_id'];
             
@@ -494,36 +494,36 @@ if(isset($_GET['pro_id'])){
             
                     $manufacturer_title = $row_manufacturer['manufacturer_title'];
             
-                    if($pro_label == "sale"){
+                    // if($pro_label == "sale"){
             
-                        $product_price = " <del> $ $pro_price </del> ";
+                    //     $product_price = " <del> $ $pro_price </del> ";
             
-                        $product_sale_price = "/ $ $pro_sale_price ";
+                    //     $product_sale_price = "/ $ $pro_sale_price ";
             
-                    }else{
+                    // }else{
             
                         $product_price = "  $ $pro_price  ";
             
                         $product_sale_price = "";
             
-                    }
+                    // }
             
-                    if($pro_label == ""){
+                    // if($pro_label == ""){
             
-                    }else{
+                    // }else{
             
-                        $product_label = "
+                    //     $product_label = "
                         
-                            <a href='#' class='label $pro_label'>
+                    //         <a href='#' class='label $pro_label'>
                             
-                                <div class='theLabel'> $pro_label </div>
-                                <div class='labelBackground'>  </div>
+                    //             <div class='theLabel'> $pro_label </div>
+                    //             <div class='labelBackground'>  </div>
                             
-                            </a>
+                    //         </a>
                         
-                        ";
+                    //     ";
             
-                    }
+                    // }
                     
                     echo "
                     
@@ -579,7 +579,7 @@ if(isset($_GET['pro_id'])){
                             
                             </div>
             
-                            $product_label
+                            
                         
                         </div>
                     

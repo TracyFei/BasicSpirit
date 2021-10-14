@@ -101,11 +101,11 @@ function getPro(){
         
         $pro_price = $row_products['product_price'];
 
-        $pro_sale_price = $row_products['product_sale'];
+        // $pro_sale_price = $row_products['product_sale'];
         
         $pro_img1 = $row_products['product_img1'];
         
-        $pro_label = $row_products['product_label'];
+        // $pro_label = $row_products['product_label'];
         
         $manufacturer_id = $row_products['manufacturer_id'];
 
@@ -117,36 +117,36 @@ function getPro(){
 
         $manufacturer_title = $row_manufacturer['manufacturer_title'];
 
-        if($pro_label == "sale"){
+        // if($pro_label == "sale"){
 
-            $product_price = " <del> $ $pro_price </del> ";
+        //     $product_price = " <del> $ $pro_price </del> ";
 
-            $product_sale_price = "/ $ $pro_sale_price ";
+        //     $product_sale_price = "/ $ $pro_sale_price ";
 
-        }else{
+        // }else{
 
             $product_price = "  $ $pro_price  ";
 
             $product_sale_price = "";
 
-        }
+        // }
 
-        if($pro_label == ""){
+        // if($pro_label == ""){
 
-        }else{
+        // }else{
 
-            $product_label = "
+        //     $product_label = "
             
-                <a href='#' class='label $pro_label'>
+        //         <a href='#' class='label $pro_label'>
                 
-                    <div class='theLabel'> $pro_label </div>
-                    <div class='labelBackground'>  </div>
+        //             <div class='theLabel'> $pro_label </div>
+        //             <div class='labelBackground'>  </div>
                 
-                </a>
+        //         </a>
             
-            ";
+        //     ";
 
-        }
+        // }
         
         echo "
         
@@ -202,7 +202,7 @@ function getPro(){
                 
                 </div>
 
-                $product_label
+
             
             </div>
         
@@ -420,7 +420,7 @@ function getProducts(){
         
         $pro_img1 = $row_products['product_img1'];
         
-        $pro_label = $row_products['product_label'];
+        // $pro_label = $row_products['product_label'];
         
         $manufacturer_id = $row_products['manufacturer_id'];
 
@@ -432,36 +432,36 @@ function getProducts(){
 
         $manufacturer_title = $row_manufacturer['manufacturer_title'];
 
-        if($pro_label == "sale"){
+        // if($pro_label == "sale"){
 
-            $product_price = " <del> $ $pro_price </del> ";
+        //     $product_price = " <del> $ $pro_price </del> ";
 
-            $product_sale_price = "/ $ $pro_sale_price ";
+        //     $product_sale_price = "/ $ $pro_sale_price ";
 
-        }else{
+        // }else{
 
             $product_price = "  $ $pro_price  ";
 
             $product_sale_price = "";
 
-        }
+        // }
 
-        if($pro_label == ""){
+        // if($pro_label == ""){
 
-        }else{
+        // }else{
 
-            $product_label = "
+            // $product_label = "
             
-                <a href='#' class='label $pro_label'>
+            //     <a href='#' class='label $pro_label'>
                 
-                    <div class='theLabel'> $pro_label </div>
-                    <div class='labelBackground'>  </div>
+            //         <div class='theLabel'> $pro_label </div>
+            //         <div class='labelBackground'>  </div>
                 
-                </a>
+            //     </a>
             
-            ";
+            // ";
 
-        }
+        // }
         
         echo "
         
@@ -517,7 +517,6 @@ function getProducts(){
                 
                 </div>
 
-                $product_label
             
             </div>
         
