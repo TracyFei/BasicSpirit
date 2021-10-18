@@ -2,7 +2,6 @@
 
     $active='Home';
     include("includes/header.php");
-
 ?>
    
    <div class="container" id="slider"><!-- container Begin -->
