@@ -25,12 +25,11 @@ function getRealIpUser(){
 function add_cart(){
     
     global $db;
-    
-    if(isset($_GET['add_cart'])){
+    if(isset($_POST['add_cart'])){
         
         $ip_add = getRealIpUser();
         
-        $p_id = $_GET['add_cart'];
+        $p_id = $_POST['add_cart'];
         
         $product_qty = $_POST['product_qty'];
         

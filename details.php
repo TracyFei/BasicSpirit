@@ -21,11 +21,11 @@ if(isset($_GET['pro_id'])){
     
     $row_products = mysqli_fetch_array($run_product);
     
-    $p_cat_id = $row_products['p_cat_id'];
+    $p_cat_id = $row_products['p_cat_id'] ?? null;
     
-    $pro_title = $row_products['product_title'];
+    $pro_title = $row_products['product_title']?? null;
     
-    $pro_price = $row_products['product_price'];
+    $pro_price = $row_products['product_price'] ?? null;
 
     //$pro_sale_price = $row_products['product_sale'];
     
@@ -334,7 +334,7 @@ if(isset($_GET['pro_id'])){
                        <div class="box"><!-- box Begin -->
                            <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
                            
-                           <?php add_cart(); ?>
+                           <?php //add_cart(); ?>
                            
                            <form action="details.php?add_cart=<?php echo $product_id; ?>" class="form-horizontal" method="post"><!-- form-horizontal Begin -->
                                <div class="form-group"><!-- form-group Begin -->
@@ -372,21 +372,21 @@ if(isset($_GET['pro_id'])){
                                
                                <?php 
 
-                                    if($pro_label == "sale"){
+                                    // if($pro_label == "sale"){
 
-                                        echo "
+                                    //     echo "
 
-                                            <p class='price'>
+                                    //         <p class='price'>
 
-                                            PRICE: <del> $$pro_price</del><br/>
+                                    //         PRICE: <del> $$pro_price</del><br/>
 
-                                            SALE: $    $pro_sale_price
+                                    //         SALE: $    $pro_sale_price
 
-                                            </p>
+                                    //         </p>
 
-                                        ";
+                                    //     ";
 
-                                    }else{
+                                    // }else{
 
                                         echo "
 
@@ -398,14 +398,68 @@ if(isset($_GET['pro_id'])){
 
                                         ";
 
-                                    }
+                                    //}
                                
                                ?>
                                
-                               <p class="text-center buttons"><button class="btn btn-primary i fa fa-shopping-cart"> Add to cart</button></p>
+                               <p class="text-center buttons"><button type="submit" name="add_cart" class="btn btn-primary i fa fa-shopping-cart" value= "<?php echo $product_id; ?>" >Add to cart </button></p>
                                
                            </form><!-- form-horizontal Finish -->
                            
+                           <?php
+                                if(isset($_POST['add_cart'])){
+        
+                                    $ip_add = getRealIpUser();
+                                    
+                                    $p_id = $_POST['add_cart'];
+                                    
+                                    $product_qty = $_POST['product_qty'];
+                                    
+                                    $product_size = $_POST['product_size'];
+                                    
+                                    $check_product = "select * from cart where ip_add='$ip_add' AND p_id='$p_id'";
+                                    
+                                    $run_check = mysqli_query($db,$check_product);
+                                    
+                                    if(mysqli_num_rows($run_check)>0){
+                                        
+                                        echo "<script>alert('This product has already added in cart')</script>";
+                                        echo "<script>window.open('details.php?pro_id=$p_id','_self')</script>";
+                                        
+                                    }else{
+                            
+                                        $get_price ="select * from products where product_id='$p_id'";
+                            
+                                        $run_price = mysqli_query($db,$get_price);
+                            
+                                        $row_price = mysqli_fetch_array($run_price);
+                            
+                                        $pro_price = $row_price['product_price'];
+                            
+                                        $pro_sale = $row_price['product_sale'];
+                            
+                                        $pro_label = $row_price['product_label'];
+                            
+                                        if($pro_label == "sale"){
+                            
+                                            $product_price = $pro_sale;
+                            
+                                        }else{
+                            
+                                            $product_price = $pro_price;
+                            
+                                        }
+                                        
+                                        $query = "insert into cart (p_id,ip_add,qty,p_price,size) values ('$p_id','$ip_add','$product_qty','$product_price','$product_size')";
+                                        
+                                        $run_query = mysqli_query($db,$query);
+                                        
+                                        echo "<script>window.open('details.php?pro_id=$p_id','_self')</script>";
+                                        
+                                    }
+                                    
+                                }
+                            ?>
                        </div><!-- box Finish -->
                        
                        <div class="row" id="thumbs"><!-- row Begin -->
