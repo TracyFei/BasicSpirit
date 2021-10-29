@@ -57,7 +57,7 @@
                             
                                 $get_c = "select * from customers";
                                 
-                                $run_c = mysqli_query($con,$get_c);
+                                $run_c = mysqli_query($conn,$get_c);
           
                                 while($row_c=mysqli_fetch_array($run_c)){
                                     

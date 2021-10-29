@@ -13,7 +13,7 @@
         
         $get_admin = "select * from admins where admin_email='$admin_session'";
         
-        $run_admin = mysqli_query($con,$get_admin);
+        $run_admin = mysqli_query($conn,$get_admin);
         
         $row_admin = mysqli_fetch_array($run_admin);
         
@@ -35,25 +35,25 @@
         
         $get_products = "select * from products";
         
-        $run_products = mysqli_query($con,$get_products);
+        $run_products = mysqli_query($conn,$get_products);
         
         $count_products = mysqli_num_rows($run_products);
         
         $get_customers = "select * from customers";
         
-        $run_customers = mysqli_query($con,$get_customers);
+        $run_customers = mysqli_query($conn,$get_customers);
         
         $count_customers = mysqli_num_rows($run_customers);
         
         $get_p_categories = "select * from product_categories";
         
-        $run_p_categories = mysqli_query($con,$get_p_categories);
+        $run_p_categories = mysqli_query($conn,$get_p_categories);
         
         $count_p_categories = mysqli_num_rows($run_p_categories);
         
         $get_pending_orders = "select * from pending_orders";
         
-        $run_pending_orders = mysqli_query($con,$get_pending_orders);
+        $run_pending_orders = mysqli_query($conn,$get_pending_orders);
         
         $count_pending_orders = mysqli_num_rows($run_pending_orders);
 

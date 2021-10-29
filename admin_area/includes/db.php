@@ -1,5 +1,9 @@
 <?php 
 
-$con = mysqli_connect("localhost","root","","ecom_store");
+$conn = mysqli_connect("localhost","Tracy","basic--spirit","test");
+
+if(!$conn){
+    echo 'Connection error: ' . mysqli_connect_error();
+}
 
 ?>

@@ -55,7 +55,7 @@
                         
                         $i=0;
                         $get_coupons = "select * from coupons";
-                        $run_coupons = mysqli_query($con,$get_coupons);
+                        $run_coupons = mysqli_query($conn,$get_coupons);
 
                         while($row_coupons=mysqli_fetch_array($run_coupons)){
 

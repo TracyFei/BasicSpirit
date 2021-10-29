@@ -58,7 +58,7 @@
                             
                                 $get_orders = "select * from pending_orders";
                                 
-                                $run_orders = mysqli_query($con,$get_orders);
+                                $run_orders = mysqli_query($conn,$get_orders);
           
                                 while($row_order=mysqli_fetch_array($run_orders)){
                                     
@@ -78,7 +78,7 @@
                                     
                                     $get_products = "select * from products where product_id='$product_id'";
                                     
-                                    $run_products = mysqli_query($con,$get_products);
+                                    $run_products = mysqli_query($conn,$get_products);
                                     
                                     $row_products = mysqli_fetch_array($run_products);
                                     
@@ -86,7 +86,7 @@
                                     
                                     $get_customer = "select * from customers where customer_id='$c_id'";
                                     
-                                    $run_customer = mysqli_query($con,$get_customer);
+                                    $run_customer = mysqli_query($conn,$get_customer);
                                     
                                     $row_customer = mysqli_fetch_array($run_customer);
                                     
@@ -94,7 +94,7 @@
                                     
                                     $get_c_order = "select * from customer_orders where order_id='$order_id'";
                                     
-                                    $run_c_order = mysqli_query($con,$get_c_order);
+                                    $run_c_order = mysqli_query($conn,$get_c_order);
                                     
                                     $row_c_order = mysqli_fetch_array($run_c_order);
                                     

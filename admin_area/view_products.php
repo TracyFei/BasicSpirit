@@ -57,7 +57,7 @@
                             
                                 $get_pro = "select * from products";
                                 
-                                $run_pro = mysqli_query($con,$get_pro);
+                                $run_pro = mysqli_query($conn,$get_pro);
           
                                 while($row_pro=mysqli_fetch_array($run_pro)){
                                     
@@ -86,7 +86,7 @@
                                     
                                         $get_sold = "select * from pending_orders where product_id='$pro_id'";
                                     
-                                        $run_sold = mysqli_query($con,$get_sold);
+                                        $run_sold = mysqli_query($conn,$get_sold);
                                     
                                         $count = mysqli_num_rows($run_sold);
                                     
