@@ -18,13 +18,13 @@ function getRealIpUser(){
     
 }
 
-/// finish getRealIpUser functions ///
+// / finish getRealIpUser functions ///
 
-/// begin add_cart functions ///
+// / begin add_cart functions ///
 
-// function add_cart(){
+function add_cart(){
     
-//     global $db;
+    global $db;
     // if(isset($_POST['add_cart'])){
         
     //     $ip_add = getRealIpUser();
@@ -78,7 +78,7 @@ function getRealIpUser(){
         
     // }
     
-//}
+}
 
 /// finish add_cart functions ///
 
