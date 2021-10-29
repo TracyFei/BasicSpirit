@@ -184,7 +184,7 @@ if(isset($_POST['submit'])){
     
     $insert_user = "insert into admins (admin_name,admin_email,admin_pass,admin_country,admin_contact,admin_job,admin_image,admin_about) values ('$user_name','$user_email','$user_pass','$user_country','$user_contact','$user_job','$user_image','$user_about')";
     
-    $run_user = mysqli_query($con,$insert_user);
+    $run_user = mysqli_query($conn,$insert_user);
     
     if($run_user){
         

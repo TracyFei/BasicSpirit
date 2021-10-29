@@ -37,7 +37,7 @@
                 
                     $get_boxes = "select * from boxes_section";
         
-                    $run_boxes = mysqli_query($con,$get_boxes);
+                    $run_boxes = mysqli_query($conn,$get_boxes);
         
                     while($run_boxes_section=mysqli_fetch_array($run_boxes)){
                         

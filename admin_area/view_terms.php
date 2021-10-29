@@ -37,7 +37,7 @@
                 
                     $get_terms = "select * from terms";
         
-                    $run_terms = mysqli_query($con,$get_terms);
+                    $run_terms = mysqli_query($conn,$get_terms);
         
                     while($run_terms_section=mysqli_fetch_array($run_terms)){
                         

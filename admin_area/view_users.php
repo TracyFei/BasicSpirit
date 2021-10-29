@@ -57,7 +57,7 @@
                             
                                 $get_users = "select * from admins";
                                 
-                                $run_users = mysqli_query($con,$get_users);
+                                $run_users = mysqli_query($conn,$get_users);
           
                                 while($row_users=mysqli_fetch_array($run_users)){
                                     
