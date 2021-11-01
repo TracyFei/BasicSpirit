@@ -5,7 +5,7 @@
     // echo phpinfo();
     // exit;
 ?>
-   
+ <body>  
    <div class="container" id="slider"><!-- container Begin -->
        
        <div class="col-md-12"><!-- col-md-12 Begin -->

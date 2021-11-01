@@ -37,7 +37,7 @@
                 
                     $get_slides = "select * from slider";
         
-                    $run_slides = mysqli_query($con,$get_slides);
+                    $run_slides = mysqli_query($conn,$get_slides);
         
                     while($row_slides=mysqli_fetch_array($run_slides)){
                         

@@ -56,7 +56,7 @@
                             
                                 $get_payments = "select * from payments";
                                 
-                                $run_payments = mysqli_query($con,$get_payments);
+                                $run_payments = mysqli_query($conn,$get_payments);
           
                                 while($row_payments=mysqli_fetch_array($run_payments)){
                                     
