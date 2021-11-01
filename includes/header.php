@@ -54,7 +54,10 @@ include("functions/functions.php");
                        <a href="customer_register.php">Register</a>
                    </li>
                    <li>
-                       <a href="checkout.php">My Account</a>
+                       <a href="/BasicSpirit/admin_area/login.php">Admin Login</a>
+                   </li>
+                   <li>
+                       <a href="/BasicSpirit/customer/customer_login.php">Customer Login</a>
                    </li>
                    <li>
                        <a href="checkout.php">
