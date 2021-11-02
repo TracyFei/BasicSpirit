@@ -4,26 +4,6 @@ $aMan = array();
 $aCat = array();
 $aPcat = array();
 
-// This is for manufacturers Begin //
-
-// if(isset($_REQUEST['man'])&&is_array($_REQUEST['man'])){
-
-//     foreach($_REQUEST['man'] as $sKey=>$sVal){
-
-//         if((int)$sVal!=0){
-
-//             $aMan[(int)$sVal] = (int)$sVal;
-
-//         }
-
-//     }
-
-// }
-
-// This is for manufacturers Finisih //
-
-// This is for categories Begin //
-
 if(isset($_REQUEST['cat'])&&is_array($_REQUEST['cat'])){
 
     foreach($_REQUEST['cat'] as $sKey=>$sVal){
