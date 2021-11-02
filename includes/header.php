@@ -57,16 +57,13 @@ include("functions/functions.php");
                        <a href="/BasicSpirit/admin_area/login.php">Admin Login</a>
                    </li>
                    <li>
-                       <a href="/BasicSpirit/customer/customer_login.php">Customer Login</a>
-                   </li>
-                   <li>
                        <a href="checkout.php">
                            
                            <?php 
                            
                            if(!isset($_SESSION['customer_email'])){
                        
-                                echo "<a href='checkout.php'> Login </a>";
+                                echo "<a href='checkout.php'> Customer Login </a>";
 
                                }else{
 
