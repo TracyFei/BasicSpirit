@@ -69,42 +69,6 @@
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
-                      <label class="col-md-3 control-label"> Manufacturer </label> 
-                      
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
-                          
-                          <select name="manufacturer" class="form-control"><!-- form-control Begin -->
-                              
-                              <option selected disabled> Select a Manufacturer </option>
-                              
-                              <?php 
-                              
-                              $get_manufacturer = "select * from manufacturers";
-                              $run_manufacturer = mysqli_query($con,$get_manufacturer);
-                              
-                              while ($row_manufacturer=mysqli_fetch_array($run_manufacturer)){
-                                  
-                                  $manufacturer_id = $row_manufacturer['manufacturer_id'];
-                                  $manufacturer_title = $row_manufacturer['manufacturer_title'];
-                                  
-                                  echo "
-                                  
-                                  <option value='$manufacturer_id'> $manufacturer_title </option>
-                                  
-                                  ";
-                                  
-                              }
-                              
-                              ?>
-                              
-                          </select><!-- form-control Finish -->
-                          
-                      </div><!-- col-md-6 Finish -->
-                       
-                   </div><!-- form-group Finish -->
-                   
-                   <div class="form-group"><!-- form-group Begin -->
-                       
                       <label class="col-md-3 control-label"> Product Category </label> 
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
@@ -116,7 +80,7 @@
                               <?php 
                               
                               $get_p_cats = "select * from product_categories";
-                              $run_p_cats = mysqli_query($con,$get_p_cats);
+                              $run_p_cats = mysqli_query($conn,$get_p_cats);
                               
                               while ($row_p_cats=mysqli_fetch_array($run_p_cats)){
                                   
@@ -152,7 +116,7 @@
                               <?php 
                               
                               $get_cat = "select * from categories";
-                              $run_cat = mysqli_query($con,$get_cat);
+                              $run_cat = mysqli_query($conn,$get_cat);
                               
                               while ($row_cat=mysqli_fetch_array($run_cat)){
                                   
@@ -327,7 +291,7 @@ if(isset($_POST['submit'])){
     
     $insert_product = "insert into products (p_cat_id,cat_id,manufacturer_id,date,product_title,product_img1,product_img2,product_img3,product_price,product_keywords,product_desc,product_label,product_sale) values ('$product_cat','$cat','$manufacturer_id',NOW(),'$product_title','$product_img1','$product_img2','$product_img3','$product_price','$product_keywords','$product_desc','$product_label','$product_sale')";
     
-    $run_product = mysqli_query($con,$insert_product);
+    $run_product = mysqli_query($conn,$insert_product);
     
     if($run_product){
         

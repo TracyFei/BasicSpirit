@@ -429,7 +429,7 @@ function getProducts(){
 
         $row_manufacturer = mysqli_fetch_array($run_manufacturer);
 
-        $manufacturer_title = $row_manufacturer['manufacturer_title'];
+        // $manufacturer_title = $row_manufacturer['manufacturer_title'];
 
         // if($pro_label == "sale"){
 
@@ -475,12 +475,6 @@ function getProducts(){
                 </a>
                 
                 <div class='text'>
-
-                <center>
-                
-                    <p class='btn btn-primary'> $manufacturer_title </p>
-                
-                </center>
                 
                     <h3>
             
