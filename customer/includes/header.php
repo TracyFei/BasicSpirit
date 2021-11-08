@@ -1,12 +1,20 @@
 <?php 
 
-session_start();
-
 include("includes/db.php");
 include("functions/functions.php");
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>M-Dev Store</title>
+    <link rel="stylesheet" href="styles/bootstrap-337.min.css">
+    <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
 <?php 
 
 if(isset($_GET['pro_id'])){
@@ -15,7 +23,7 @@ if(isset($_GET['pro_id'])){
     
     $get_product = "select * from products where product_id='$product_id'";
     
-    $run_product = mysqli_query($con,$get_product);
+    $run_product = mysqli_query($conn,$get_product);
     
     $row_product = mysqli_fetch_array($run_product);
     
@@ -35,7 +43,7 @@ if(isset($_GET['pro_id'])){
     
     $get_p_cat = "select * from product_categories where p_cat_id='$p_cat_id'";
     
-    $run_p_cat = mysqli_query($con,$get_p_cat);
+    $run_p_cat = mysqli_query($conn,$get_p_cat);
     
     $row_p_cat = mysqli_fetch_array($run_p_cat);
     
