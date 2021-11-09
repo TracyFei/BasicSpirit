@@ -88,7 +88,7 @@ if(isset($_GET['pro_id'])){
                    ?>
                
                </a>
-               <a href="checkout.php"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a>
+               <!-- <a href="checkout.php"> <?php items(); ?> Items In Your Cart | Total Price: <?php total_price(); ?> </a> -->
                
            </div><!-- col-md-6 offer Finish -->
            

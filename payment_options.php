@@ -30,8 +30,7 @@
                 
                 Paypall Payment
                 
-                <img class="img-responsive" src="images/paypall_img.png" alt="img-paypall">
-                
+                <script src="https://www.paypal.com/sdk/js?client-id=AfG7_1Eej9w_LfaacLw7Fjo8r9vwEZrAbSzJrL4U4S1HOZcKlgIfqj8yoh5sL1U8LOc6y61ncpBKLDTw"></script>
             </a>
             
         </p> <!-- lead Finish -->

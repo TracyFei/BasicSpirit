@@ -8,7 +8,7 @@
         
         $get_customer = "select * from customers where customer_email='$customer_session'";
         
-        $run_customer = mysqli_query($con,$get_customer);
+        $run_customer = mysqli_query($conn,$get_customer);
         
         $row_customer = mysqli_fetch_array($run_customer);
         

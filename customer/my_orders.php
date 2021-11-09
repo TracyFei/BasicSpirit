@@ -45,7 +45,7 @@
             
             $get_customer = "select * from customers where customer_email='$customer_session'";
             
-            $run_customer = mysqli_query($con,$get_customer);
+            $run_customer = mysqli_query($conn,$get_customer);
             
             $row_customer = mysqli_fetch_array($run_customer);
             
@@ -53,7 +53,7 @@
             
             $get_orders = "select * from customer_orders where customer_id='$customer_id'";
             
-            $run_orders = mysqli_query($con,$get_orders);
+            $run_orders = mysqli_query($conn,$get_orders);
             
             $i = 0;
             

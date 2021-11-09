@@ -154,7 +154,7 @@ include("functions/functions.php");
                    
                    <i class="fa fa-shopping-cart"></i>
                    
-                   <span><?php items(); ?> Items In Your Cart</span>
+                   <!-- <span><?php //items(); ?> Items In Your Cart</span> -->
                    
                </a><!-- btn navbar-btn btn-primary Finish -->
                

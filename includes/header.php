@@ -133,11 +133,11 @@ include("functions/functions.php");
                            
                            if(!isset($_SESSION['customer_email'])){
                                
-                               echo"<a href='checkout.php'>Checkout</a>";
+                               echo"<a href='checkout.php'>My Account</a>";
                                
                            }else{
                                
-                              echo"<a href='customer/my_account.php?my_orders'>Checkout</a>"; 
+                              echo"<a href='customer/my_account.php?my_orders'>My Account</a>"; 
                                
                            }
                            
