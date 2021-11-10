@@ -1,5 +1,6 @@
+
 <div class="box"><!-- box Begin -->
-   
+
    <?php 
     
     $session_email = $_SESSION['customer_email'];
@@ -26,12 +27,24 @@
          
         <p class="lead"><!-- lead Begin -->
             
-            <a href="#">
-                
-                Paypall Payment
-                
-                <script src="https://www.paypal.com/sdk/js?client-id=AfG7_1Eej9w_LfaacLw7Fjo8r9vwEZrAbSzJrL4U4S1HOZcKlgIfqj8yoh5sL1U8LOc6y61ncpBKLDTw"></script>
-            </a>
+            <script src="https://www.paypal.com/sdk/js?client-id=AfG7_1Eej9w_LfaacLw7Fjo8r9vwEZrAbSzJrL4U4S1HOZcKlgIfqj8yoh5sL1U8LOc6y61ncpBKLDTw"></script>
+
+            <div id="paypal-button-container"></div>
+
+            <script>
+            paypal.Buttons().render('#paypal-button-container')
+            </script>
+
+            <input type="hidden" name="cmd" value="_ext-enter">
+            <form action="https://www.paypal.com/sdk/js?client-id=AfG7_1Eej9w_LfaacLw7Fjo8r9vwEZrAbSzJrL4U4S1HOZcKlgIfqj8yoh5sL1U8LOc6y61ncpBKLDTw" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="you@youremail.com">
+            <input type="hidden" name="item_name" value="Item Name">
+            <input type="hidden" name="currency_code" value="NZD">
+            <input type="hidden" name="amount" value="11">
+            <input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+            </form>
+
             
         </p> <!-- lead Finish -->
          

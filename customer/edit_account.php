@@ -4,7 +4,7 @@ $customer_session = $_SESSION['customer_email'];
 
 $get_customer = "select * from customers where customer_email='$customer_session'";
 
-$run_customer = mysqli_query($con,$get_customer);
+$run_customer = mysqli_query($conn,$get_customer);
 
 $row_customer = mysqli_fetch_array($run_customer);
 
@@ -126,7 +126,7 @@ if(isset($_POST['update'])){
     
     $update_customer = "update customers set customer_name='$c_name',customer_email='$c_email',customer_country='$c_country',customer_city='$c_city',customer_address='$c_address',customer_contact='$c_contact',customer_image='$c_image' where customer_id='$update_id' ";
     
-    $run_customer = mysqli_query($con,$update_customer);
+    $run_customer = mysqli_query($conn,$update_customer);
     
     if($run_customer){
         

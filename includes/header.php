@@ -42,7 +42,7 @@ include("functions/functions.php");
                    ?>
                    
                </a>
-               <a href="checkout.php"><?php items(); ?> Items In Your Cart | Go Checkout: <?php total_price(); ?> </a>
+               <a href="checkout.php"><?php items(); ?> Items In Your Cart | Total Amount: <?php total_price(); ?> </a>
                
            </div><!-- col-md-6 offer Finish -->
            

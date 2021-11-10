@@ -328,15 +328,15 @@ if(isset($_GET['order_id'])){
                         
                         $insert_payment = "insert into payments (invoice_no,amount,payment_mode,ref_no,code,payment_date) values ('$invoice_no','$amount','$payment_mode','$ref_no','$code','$payment_date')";
                         
-                        $run_payment = mysqli_query($con,$insert_payment);
+                        $run_payment = mysqli_query($conn,$insert_payment);
                         
                         $update_customer_order = "update customer_orders set order_status='$complete' where order_id='$update_id'";
                         
-                        $run_customer_order = mysqli_query($con,$update_customer_order);
+                        $run_customer_order = mysqli_query($conn,$update_customer_order);
                         
                         $update_pending_order = "update pending_orders set order_status='$complete' where order_id='$update_id'";
                         
-                        $run_pending_order = mysqli_query($con,$update_pending_order);
+                        $run_pending_order = mysqli_query($conn,$update_pending_order);
                         
                         if($run_pending_order){
                             

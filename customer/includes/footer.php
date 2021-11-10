@@ -165,12 +165,7 @@
     <div class="container"><!-- container Begin -->
         <div class="col-md-6"><!-- col-md-6 Begin -->
             
-            <p class="pull-left">&copy; 2018 M-Dev Store All Rights Reserve</p>
-            
-        </div><!-- col-md-6 Finish -->
-        <div class="col-md-6"><!-- col-md-6 Begin -->
-            
-            <p class="pull-right">Theme by: <a href="#">MrGhie</a></p>
+            <p class="pull-left">&copy; 2021 Basic Spirit All Rights Reserve</p>
             
         </div><!-- col-md-6 Finish -->
     </div><!-- container Finish -->
