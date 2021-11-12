@@ -1,8 +1,6 @@
-<?php 
-
+<?php
     $active='Cart';
     include("includes/header.php");
-
 ?>
    
    <div id="content"><!-- #content Begin -->
@@ -192,17 +190,28 @@
                                    
                                </button><!-- btn btn-default Finish -->
                                
-                               <a href="checkout.php" class="btn btn-primary">
+                               <!-- <a href="checkout.php" class="btn btn-primary">
                                    
                                    Proceed Checkout <i class="fa fa-chevron-right"></i>
                                    
-                               </a>
+                               </a> -->
                                
                            </div><!-- pull-right Finish -->
                            
                        </div><!-- box-footer Finish -->
                        
                    </form><!-- form Finish -->
+                   <form class="paypal" action="payments.php" method="post" id="paypal_form">
+                        <input type="hidden" name="cmd" value="_xclick" />
+                        <input type="hidden" name="no_note" value="1" />
+                        <input type="hidden" name="lc" value="UK" />
+                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHostedGuest" />
+                        <input type="hidden" name="first_name" value="Customer's First Name" />
+                        <input type="hidden" name="last_name" value="Customer's Last Name" />
+                        <input type="hidden" name="payer_email" value="customer@example.com" />
+                        <input type="hidden" name="item_number" value="123456" />
+                        <input type="submit" name="submit" value="proceed payment"/>
+                    </form>
                    
                </div><!-- box Finish -->
 
@@ -273,7 +282,7 @@
                
                 function update_cart(){
                     
-                    global $con;
+                    global $conn;
                     
                     if(isset($_POST['update'])){
                         
@@ -281,7 +290,7 @@
                             
                             $delete_product = "delete from cart where p_id='$remove_id'";
                             
-                            $run_delete = mysqli_query($con,$delete_product);
+                            $run_delete = mysqli_query($conn,$delete_product);
                             
                             if($run_delete){
                                 
