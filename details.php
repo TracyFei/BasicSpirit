@@ -294,7 +294,7 @@ if(isset($_GET['pro_id'])){
                <div id="productMain" class="row"><!-- row Begin -->
                    <div class="col-sm-6"><!-- col-sm-6 Begin -->
                        <div id="mainImage"><!-- #mainImage Begin -->
-                       <img src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="Product 3-a">
+                       <img src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="Product image">
                        </div><!-- mainImage Finish -->
 
                    </div><!-- col-sm-6 Finish -->
