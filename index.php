@@ -124,12 +124,6 @@
                    
                    <div class="box same-height"><!-- box same-height Begin -->
                        
-                       <div class="icon"><!-- icon Begin -->
-                           
-                           <i class="fa fa-heart"></i>
-                           
-                       </div><!-- icon Finish -->
-                       
                        <h3><a href="#"><?php echo $box_title; ?></a></h3>
                        
                        <p> <?php echo $box_desc; ?> </p>
