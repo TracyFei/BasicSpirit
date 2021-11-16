@@ -125,7 +125,7 @@ include("functions/functions.php");
                            <a href="index.php">Home</a>
                        </li>
                        <li class="<?php if($active=='Shop') echo"active"; ?>">
-                           <a href="shop.php">Fine Handcrafted Pewter</a>
+                           <a href="shop.php">Shop</a>
                        </li>
                        <li class="<?php if($active=='Account') echo"active"; ?>">
                            
@@ -143,9 +143,6 @@ include("functions/functions.php");
                            
                            ?>
                            
-                       </li>
-                       <li class="<?php if($active=='Cart') echo"active"; ?>">
-                           <a href="shop.php">Artisan Giftware</a>
                        </li>
                        <li class="<?php if($active=='Contact') echo"active"; ?>">
                            <a href="contact.php">Contact Us</a>

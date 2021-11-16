@@ -1,6 +1,7 @@
 <?php
     $active='Cart';
     include("includes/header.php");
+    
 ?>
    
    <div id="content"><!-- #content Begin -->
@@ -157,16 +158,6 @@
                                </tfoot><!-- tfoot Finish -->
                                
                            </table><!-- table Finish -->
-
-                           <div class="form-inline pull-right"><!-- form-inline Begin -->
-                               <div class="form-group"><!-- form-group Begin -->
-
-                                    <label> Coupon Code: </label>
-                                    <input type="text" name="code" class="form-control">
-                                    <input type="submit" class="btn btn-primary" value="Use Coupon" name="apply_coupon">
-                               
-                               </div><!-- form-group Finish -->
-                           </div><!-- form-inline Finish -->
                            
                        </div><!-- table-responsive Finish -->
                        
