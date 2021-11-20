@@ -104,7 +104,7 @@
                             <?php 
                             
                                 $get_p = "select * from products";
-                                $run_p = mysqli_query($con,$get_p);
+                                $run_p = mysqli_query($conn,$get_p);
 
                                 while($row_p = mysqli_fetch_array($run_p)){
 
@@ -170,7 +170,7 @@ if(isset($_POST['submit'])){
     $coupon_used=0;
 
     $get_coupons = "select * from coupons where product_id='$coupon_pro_id' or coupon_code='$coupon_code'";
-    $run_coupons = mysqli_query($con,$get_coupons);
+    $run_coupons = mysqli_query($conn,$get_coupons);
     $check_coupons = mysqli_num_rows($run_coupons);
 
     if($check_coupons==1){
@@ -180,7 +180,7 @@ if(isset($_POST['submit'])){
     }else{
 
         $insert_coupon = "insert into coupons (product_id,coupon_title,coupon_price,coupon_code,coupon_limit,coupon_used)values('$coupon_pro_id','$coupon_title','$coupon_price','$coupon_code','$coupon_limit','$coupon_used')";
-        $run_coupon = mysqli_query($con,$insert_coupon);
+        $run_coupon = mysqli_query($conn,$insert_coupon);
 
         if($run_coupon){
 
