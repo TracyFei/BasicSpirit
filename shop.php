@@ -94,53 +94,6 @@
 
             // Finish Hide & Show Sidebar Toggle //
 
-            // Search Filters | by Letter // 
-
-            $(function(){
-
-                $.fn.extend({
-
-                    filterTable: function(){
-
-                        return this.each(function(){
-
-                            $(this).on('keyup', function(){
-
-                                var $this = $(this),
-                                search = $this.val().toLowerCase(),
-                                target = $this.attr('data-filters'),
-                                handle = $(target),
-                                rows = handle.find('li a');
-
-                                if(search == ''){
-
-                                    rows.show();
-
-                                }else{
-
-                                    rows.each(function(){
-
-                                        var $this = $(this);
-
-                                        $this.text().toLowerCase().indexOf(search) === -1 ? $this.hide() : $this.show();
-
-                                    });
-
-                                }
-                            });
-
-                        });
-
-                    }
-
-                });
-
-                $('[data-action="filter"][id="dev-table-filter"]').filterTable();
-
-            });
-
-            // Finish Search Filters | by Letter //
-
         });
     
     </script>
@@ -152,41 +105,6 @@
             // getProducts Function Begin //
 
             function getProducts(){
-
-                // Code For Manufacturers Begin //
-
-                var sPath = '';
-                var aInputs = $('li').find('.get_manufacturer');
-                var aKeys = Array();
-                var aValues = Array();
-
-                iKey = 0;
-
-                $.each(aInputs, function(key, oInput){
-
-                    if(oInput.checked){
-
-                        aKeys[iKey] = oInput.value
-
-                    };
-
-                    iKey++;
-
-                });
-
-                if(aKeys.length>0){
-
-                    var sPath = '';
-
-                    for(var i = 0; i < aKeys.length; i++){
-
-                        sPath = sPath + 'man[]=' + aKeys[i]+'&';
-
-                    }
-
-                }
-
-                // Code For Manufacturers Finish //
 
                 // Code For Product Categories Begin //
 

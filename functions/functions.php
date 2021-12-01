@@ -338,24 +338,6 @@ function getProducts(){
     global $db;
     $aWhere = array();
 
-    /// Begin for Manufacturer ///
-    
-    if(isset($_REQUEST['man'])&&is_array($_REQUEST['man'])){
-
-        foreach($_REQUEST['man'] as $sKey=>$sVal){
-
-            if((int)$sVal!=0){
-
-                $aWhere[] = 'manufacturer_id='.(int)$sVal;
-
-            }
-
-        }
-
-    }
-
-    /// Finish for Manufacturer ///  
-
     /// Begin for Product Categories /// 
 
     if(isset($_REQUEST['p_cat'])&&is_array($_REQUEST['p_cat'])){
@@ -414,12 +396,8 @@ function getProducts(){
         $pro_title = $row_products['product_title'];
         
         $pro_price = $row_products['product_price'];
-
-        //$pro_sale_price = $row_products['product_sale'];
         
         $pro_img1 = $row_products['product_img1'];
-        
-        // $pro_label = $row_products['product_label'];
         
         $manufacturer_id = $row_products['manufacturer_id'];
 
@@ -429,38 +407,9 @@ function getProducts(){
 
         $row_manufacturer = mysqli_fetch_array($run_manufacturer);
 
-        // $manufacturer_title = $row_manufacturer['manufacturer_title'];
-
-        // if($pro_label == "sale"){
-
-        //     $product_price = " <del> $ $pro_price </del> ";
-
-        //     $product_sale_price = "/ $ $pro_sale_price ";
-
-        // }else{
-
             $product_price = "  $ $pro_price  ";
 
             $product_sale_price = "";
-
-        // }
-
-        // if($pro_label == ""){
-
-        // }else{
-
-            // $product_label = "
-            
-            //     <a href='#' class='label $pro_label'>
-                
-            //         <div class='theLabel'> $pro_label </div>
-            //         <div class='labelBackground'>  </div>
-                
-            //     </a>
-            
-            // ";
-
-        // }
         
         echo "
         
@@ -532,25 +481,6 @@ function getPaginator(){
     $per_page=6;
     $aWhere = array();
     $aPath = '';
-
-    /// Begin for Manufacturer ///
-    
-    if(isset($_REQUEST['man'])&&is_array($_REQUEST['man'])){
-
-        foreach($_REQUEST['man'] as $sKey=>$sVal){
-
-            if((int)$sVal!=0){
-
-                $aWhere[] = 'manufacturer_id='.(int)$sVal;
-                $aPath .= 'man[]='.(int)$sVal.'&';
-
-            }
-
-        }
-
-    }
-
-    /// Finish for Manufacturer ///  
 
     /// Begin for Product Categories /// 
 

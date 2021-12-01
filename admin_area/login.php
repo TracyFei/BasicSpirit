@@ -29,7 +29,9 @@
                
                Login
                
-           </button><!-- btn btn-lg btn-primary btn-block finish -->
+           </button><!-- btn btn-lg btn-primary btn-block finish --> <br>
+
+           <a href="..\index.php"> Back to Home</a>
            
        </form><!-- form-login finish -->
    </div><!-- container finish -->

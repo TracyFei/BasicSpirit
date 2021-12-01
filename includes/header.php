@@ -92,8 +92,7 @@ include("functions/functions.php");
                
                <a href="index.php" class="navbar-brand home"><!-- navbar-brand home Begin -->
                    
-                   <img src="images/basicSpiritLogo.png" alt="Basic Spirit Logo" class="hidden-xs">
-                   <!-- <img src="images/ecom-store-logo-mobile.png" alt="M-dev-Store Logo Mobile" class="visible-xs"> -->
+                   <img src="images/basicSpiritLogo.jpg" alt="Basic Spirit Logo" class="hidden-xs">
                    
                </a><!-- navbar-brand home Finish -->
                

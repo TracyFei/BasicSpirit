@@ -2,7 +2,7 @@ body{
     font-size: 14px;
     line-height: 1.42857143;
     color: #333333;
-    background: #a8b8da;
+    background: #fdf6ff;
     overflow-x: hidden;
 }
 
@@ -59,7 +59,7 @@ body{
 /* Header Styles */
 
 .navbar{
-    background: #a8b8da;
+    background: #fdf6ff;
 }
 .navbar-collapse .right{
     float: right;
@@ -87,9 +87,9 @@ body{
     padding-top: 10px;
 }
 .btn-primary{
-    color: rgb(255, 255, 255);
-    background: rgb(79, 191, 168);
-    border-color: rgb(65, 179, 156);
+    color: rgb(0, 0, 0);
+    background: rgb(136, 222, 248);
+    border: none;
 }
 #search .navbar-form{
     float: right;
@@ -510,7 +510,8 @@ body{
 }
 
 .navbar-default{
-    border-color: none;
+    border: none;
 }
+
 
 /* styling the label finish */
