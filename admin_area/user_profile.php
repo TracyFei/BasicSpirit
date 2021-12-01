@@ -16,7 +16,7 @@
         
         $get_user = "select * from admins where admin_id='$edit_user'";
         
-        $run_user = mysqli_query($con,$get_user);
+        $run_user = mysqli_query($conn,$get_user);
         
         $row_user = mysqli_fetch_array($run_user);
         
@@ -220,7 +220,7 @@ if(isset($_POST['update'])){
     
     $update_user = "update admins set admin_name='$user_name',admin_email='$user_email',admin_pass='$user_pass',admin_country='$user_country',admin_contact='$user_contact',admin_job='$user_job',admin_about='$user_about',admin_image='$user_image' where admin_id='$user_id'";
     
-    $run_user = mysqli_query($con,$update_user);
+    $run_user = mysqli_query($conn,$update_user);
     
     if($run_user){
         

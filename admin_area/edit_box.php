@@ -16,7 +16,7 @@
         
         $edit_box_query = "select * from boxes_section where box_id='$edit_box_id'";
         
-        $run_edit_box = mysqli_query($con,$edit_box_query);
+        $run_edit_box = mysqli_query($conn,$edit_box_query);
         
         $row_edit_box = mysqli_fetch_array($run_edit_box);
         

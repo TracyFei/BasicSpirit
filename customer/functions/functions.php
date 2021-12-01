@@ -15,7 +15,6 @@ function getRealIpUser(){
             default : return $_SERVER['REMOTE_ADDR'];
             
     }
-    
 }
 
 /// finish getRealIpUser functions ///

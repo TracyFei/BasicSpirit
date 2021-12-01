@@ -161,11 +161,11 @@ if(isset($_POST['register'])){
     
     $insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image,customer_ip) values ('$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image','$c_ip')";
     
-    $run_customer = mysqli_query($con,$insert_customer);
+    $run_customer = mysqli_query($conn,$insert_customer);
     
     $sel_cart = "select * from cart where ip_add='$c_ip'";
     
-    $run_cart = mysqli_query($con,$sel_cart);
+    $run_cart = mysqli_query($conn,$sel_cart);
     
     $check_cart = mysqli_num_rows($run_cart);
     
