@@ -319,7 +319,7 @@ function total_price(){
         
         $pro_qty = $record['qty'];
             
-        $sub_total = (int)$record['p_price']*(int)$pro_qty;
+        $sub_total = (float)$record['p_price']*(int)$pro_qty;
             
         $total += $sub_total;
         
