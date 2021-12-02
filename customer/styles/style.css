@@ -14,6 +14,7 @@ body{
     color: #333333;
     background: rgb(206, 221, 253);
     overflow-x: hidden;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Top Styles */
@@ -129,7 +130,7 @@ body{
     border: solid 1px #e6e6e6;
     box-sizing: border-box;
     padding: 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+    box-shadow: none;
 }
 #advantages .box .icon{
     position: absolute;
@@ -220,7 +221,7 @@ body{
     margin-bottom: 20px;
     background: #ffffff;
     border-radius: 5px;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, .5);
+    box-shadow: none;
 }
 .breadcrumb> li + li:before{
     content: ">\00a0";

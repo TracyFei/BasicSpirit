@@ -136,7 +136,7 @@
                                        
                                        <td>
                                            
-                                           $<?php echo $sub_total; ?>
+                                           $<?php echo number_format((float)$sub_total, 2, '.', ''); ?>
                                            
                                        </td>
                                        
@@ -151,7 +151,7 @@
                                    <tr><!-- tr Begin -->
                                        
                                        <th colspan="5">Total</th>
-                                       <th colspan="2">$<?php echo $total; ?></th>
+                                       <th colspan="2">$<?php echo number_format((float)$total, 2, '.', ''); ?></th>
                                        
                                    </tr><!-- tr Finish -->
                                    
@@ -368,7 +368,7 @@
                                <tr class="total"><!-- tr Begin -->
                                    
                                    <td> Total </td>
-                                   <th> $<?php echo $total; ?> </th>
+                                   <th> $<?php echo number_format((float)$total, 2, '.', ''); ?> </th>
                                    
                                </tr><!-- tr Finish -->
                                
