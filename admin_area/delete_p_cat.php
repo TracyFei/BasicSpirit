@@ -16,7 +16,7 @@
         
         $delete_p_cat = "delete from product_categories where p_cat_id='$delete_p_cat_id'";
         
-        $run_delete = mysqli_query($con,$delete_p_cat);
+        $run_delete = mysqli_query($conn,$delete_p_cat);
         
         if($run_delete){
             

@@ -16,7 +16,7 @@
         
         $delete_slide = "delete from slider where slide_id='$delete_slide_id'";
         
-        $run_delete = mysqli_query($con,$delete_slide);
+        $run_delete = mysqli_query($conn,$delete_slide);
         
         if($run_delete){
             

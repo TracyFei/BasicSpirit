@@ -53,7 +53,7 @@
           
                                 $get_cats = "select * from categories";
           
-                                $run_cats = mysqli_query($con,$get_cats);
+                                $run_cats = mysqli_query($conn,$get_cats);
           
                                 while($row_cats=mysqli_fetch_array($run_cats)){
                                     

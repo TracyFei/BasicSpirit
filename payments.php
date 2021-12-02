@@ -93,7 +93,7 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 	// Handle the PayPal response.
 
 	// Create a connection to the database.
-	$db = new mysqli($dbConfig['host'], $dbConfig['username'], $dbConfig['password'], $dbConfig['name']);
+	$db = new mysqli($dbConfig['localhost'], $dbConfig['Tracy'], $dbConfig['basic--spirit'], $dbConfig['test']);
 
 	// Assign posted variables to local data array.
 	$data = [
@@ -113,7 +113,7 @@ if (!isset($_POST["txn_id"]) && !isset($_POST["txn_type"])) {
 	// database.
 	if (verifyTransaction($_POST) && checkTxnid($data['txn_id'])) {
 		if (addPayment($data) !== false) {
-			// Payment successfully added.
+			
 		}
 	}
 }

@@ -121,7 +121,7 @@
               
               $insert_cat = "insert into categories (cat_title,cat_top,cat_image) values ('$cat_title','$cat_top','$cat_image')";
               
-              $run_cat = mysqli_query($con,$insert_cat);
+              $run_cat = mysqli_query($conn,$insert_cat);
               
               if($run_cat){
                   

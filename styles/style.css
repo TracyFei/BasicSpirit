@@ -2,7 +2,7 @@ body{
     font-size: 14px;
     line-height: 1.42857143;
     color: #333333;
-    background: #fdf6ff;
+    background: rgb(206, 221, 253);
     overflow-x: hidden;
 }
 
@@ -59,7 +59,7 @@ body{
 /* Header Styles */
 
 .navbar{
-    background: #fdf6ff;
+    background: rgb(206, 221, 253);
 }
 .navbar-collapse .right{
     float: right;
@@ -88,7 +88,7 @@ body{
 }
 .btn-primary{
     color: rgb(0, 0, 0);
-    background: rgb(136, 222, 248);
+    background: rgb(152, 241, 253);
     border: none;
 }
 #search .navbar-form{

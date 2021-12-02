@@ -201,8 +201,29 @@
                         <input type="hidden" name="last_name" value="Customer's Last Name" />
                         <input type="hidden" name="payer_email" value="customer@example.com" />
                         <input type="hidden" name="item_number" value="123456" />
-                        <input type="submit" name="submit" value="proceed payment"/>
+                        <input type="submit" name="submit" value="proceed to payment"/>
                     </form>
+
+                    <?php 
+    
+                        // $session_email = $_SESSION['customer_email'];
+                        
+                        // $select_customer = "select * from customers where customer_email='$session_email'";
+                        
+                        // $run_customer = mysqli_query($conn,$select_customer);
+                        
+                        // $row_customer = mysqli_fetch_array($run_customer);
+                        
+                        // $customer_id = $row_customer['customer_id'];
+                        
+                    ?>
+                        
+                    <!-- <h1 class="text-center">Payment Options For You</h1>   -->
+                    
+                    <!-- <p class="lead text-center">lead text-center Begin -->
+                        
+                        <!-- <a href="order.php?c_id=<?php //echo $customer_id ?>"> Offline Payment </a> -->
+                    
                    
                </div><!-- box Finish -->
 

@@ -325,7 +325,7 @@ function total_price(){
         
     }
     
-    echo "$" . $total;
+    echo "$" . number_format((float)$total, 2, '.', '');
     
 }
 
@@ -395,7 +395,7 @@ function getProducts(){
         
         $pro_title = $row_products['product_title'];
         
-        $pro_price = $row_products['product_price'];
+        $pro_price = number_format((float)$row_products['product_price'], 2, '.', '');
         
         $pro_img1 = $row_products['product_img1'];
         
@@ -608,7 +608,7 @@ function checkTxnid($txnid) {
 	global $db;
 
 	$txnid = $db->real_escape_string($txnid);
-	$results = $db->query('SELECT * FROM `payments` WHERE txnid = \'' . $txnid . '\'');
+	$results = $db->query('SELECT * FROM `payment` WHERE txnid = \'' . $txnid . '\'');
 
 	return ! $results->num_rows;
 }
@@ -623,7 +623,7 @@ function addPayment($data) {
 	global $db;
 
 	if (is_array($data)) {
-		$stmt = $db->prepare('INSERT INTO `payments` (txnid, payment_amount, payment_status, itemid, createdtime) VALUES(?, ?, ?, ?, ?)');
+		$stmt = $db->prepare('INSERT INTO `payment` (txnid, payment_amount, payment_status, itemid, createdtime) VALUES(?, ?, ?, ?, ?)');
 		$stmt->bind_param(
 			'sdsss',
 			$data['txn_id'],

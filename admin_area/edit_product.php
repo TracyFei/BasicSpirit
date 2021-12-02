@@ -16,7 +16,7 @@
         
         $get_p = "select * from products where product_id='$edit_id'";
         
-        $run_edit = mysqli_query($con,$get_p);
+        $run_edit = mysqli_query($conn,$get_p);
         
         $row_edit = mysqli_fetch_array($run_edit);
         
@@ -50,7 +50,7 @@
         
         $get_manufacturer = "select * from manufacturers where manufacturer_id='$m_id'";
         
-        $run_manufacturer = mysqli_query($con,$get_manufacturer);
+        $run_manufacturer = mysqli_query($conn,$get_manufacturer);
         
         $row_manufacturer = mysqli_fetch_array($run_manufacturer);
         
@@ -60,7 +60,7 @@
         
         $get_p_cat = "select * from product_categories where p_cat_id='$p_cat'";
         
-        $run_p_cat = mysqli_query($con,$get_p_cat);
+        $run_p_cat = mysqli_query($conn,$get_p_cat);
         
         $row_p_cat = mysqli_fetch_array($run_p_cat);
         
@@ -68,7 +68,7 @@
         
         $get_cat = "select * from categories where cat_id='$cat'";
         
-        $run_cat = mysqli_query($con,$get_cat);
+        $run_cat = mysqli_query($conn,$get_cat);
         
         $row_cat = mysqli_fetch_array($run_cat);
         
@@ -188,7 +188,7 @@
                               <?php 
                               
                               $get_p_cats = "select * from product_categories";
-                              $run_p_cats = mysqli_query($con,$get_p_cats);
+                              $run_p_cats = mysqli_query($conn,$get_p_cats);
                               
                               while ($row_p_cats=mysqli_fetch_array($run_p_cats)){
                                   
@@ -226,7 +226,7 @@
                               <?php 
                               
                               $get_cat = "select * from categories";
-                              $run_cat = mysqli_query($con,$get_cat);
+                              $run_cat = mysqli_query($conn,$get_cat);
                               
                               while ($row_cat=mysqli_fetch_array($run_cat)){
                                   
@@ -421,7 +421,7 @@ if(isset($_POST['update'])){
         
         $update_product = "update products set p_cat_id='$product_cat',cat_id='$cat',manufacturer_id='$manufacturer_id',date=NOW(),product_title='$product_title',product_img1='$product_img1',product_img2='$product_img2',product_img3='$product_img3',product_price='$product_price',product_keywords='$product_keywords',product_desc='$product_desc',product_sale='$product_sale',product_label='$product_label' where product_id='$p_id'";
         
-        $run_product = mysqli_query($con,$update_product);
+        $run_product = mysqli_query($conn,$update_product);
         
         if($run_product){
             
@@ -437,7 +437,7 @@ if(isset($_POST['update'])){
         
         $update_product = "update products set p_cat_id='$product_cat',cat_id='$cat',manufacturer_id='$manufacturer_id',date=NOW(),product_title='$product_title',product_price='$product_price',product_keywords='$product_keywords',product_desc='$product_desc',product_sale='$product_sale',product_label='$product_label' where product_id='$p_id'";
         
-        $run_product = mysqli_query($con,$update_product);
+        $run_product = mysqli_query($conn,$update_product);
         
         if($run_product){
             
