@@ -25,7 +25,7 @@ if(isset($_GET['pro_id'])){
     
     $pro_title = $row_products['product_title']?? null;
     
-    $pro_price = $row_products['product_price'] ?? null;
+    $pro_price = number_format((float)$row_products['product_price'], 2, '.', '') ?? null;
 
     //$pro_sale_price = $row_products['product_sale'];
     
@@ -63,7 +63,7 @@ if(isset($_GET['pro_id'])){
     
     $row_p_cat = mysqli_fetch_array($run_p_cat);
     
-    $p_cat_title = $row_p_cat['p_cat_title'];
+    // $p_cat_title = $row_p_cat['p_cat_title'];
     
 }
 
@@ -281,9 +281,9 @@ if(isset($_GET['pro_id'])){
                        Shop
                    </li>
                    
-                   <li>
+                   <!-- <li>
                        <a href="shop.php?p_cat=<?php echo $p_cat_id; ?>"><?php echo $p_cat_title; ?></a>
-                   </li>
+                   </li> -->
                    <li> <?php echo $pro_title; ?> </li>
                </ul><!-- breadcrumb Finish -->
                

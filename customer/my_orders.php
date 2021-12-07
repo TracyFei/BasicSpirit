@@ -28,10 +28,10 @@
                 <th> Due Amount: </th>
                 <th> Invoice No: </th>
                 <th> Qty: </th>
-                <th> Size: </th>
+                <!-- <th> Size: </th> -->
                 <th> Order Date:</th>
-                <th> Paid / Unpaid: </th>
-                <th> Status: </th>
+                <!-- <th> Paid / Unpaid: </th>
+                <th> Status: </th> -->
                 
             </tr><!--  tr Finish  -->
             
@@ -93,15 +93,15 @@
                 <td> $<?php echo number_format((float)$due_amount, 2, '.', ''); ?> </td>
                 <td> <?php echo $invoice_no; ?> </td>
                 <td> <?php echo $qty; ?> </td>
-                <td> <?php echo $size; ?> </td>
+                <!-- <td> <?php echo $size; ?> </td> -->
                 <td> <?php echo $order_date; ?> </td>
-                <td> <?php echo $order_status; ?> </td>
+                <!-- <td> <?php echo $order_status; ?> </td> -->
                 
-                <td>
+                <!-- <td>
                     
                     <a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-primary btn-sm"> Confirm Paid </a>
                     
-                </td>
+                </td> -->
                 
             </tr><!--  tr Finish  -->
             

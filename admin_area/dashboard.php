@@ -1,11 +1,12 @@
 <?php 
-    
+
     if(!isset($_SESSION['admin_email'])){
         
         echo "<script>window.open('login.php','_self')</script>";
         
     }else{
 
+    
 ?> 
 
 <div class="row"><!-- row no: 1 begin -->
@@ -211,8 +212,8 @@
                                 <th> Invoice No: </th>
                                 <th> Product ID: </th>
                                 <th> Product Qty: </th>
-                                <th> Product Size: </th>
-                                <th> Status: </th>
+                                <!-- <th> Product Size: </th>
+                                <th> Status: </th> -->
                             
                             </tr><!-- th finish -->
                             
@@ -271,7 +272,7 @@
                                 <td> <?php echo $invoice_no; ?> </td>
                                 <td> <?php echo $product_id; ?> </td>
                                 <td> <?php echo $qty; ?> </td>
-                                <td> <?php echo $size; ?> </td>
+                                <!-- <td> <?php echo $size; ?> </td>
                                 <td>
                                     
                                     <?php 
@@ -288,7 +289,7 @@
                                     
                                     ?>
                                     
-                                </td>
+                                </td> -->
                                 
                             </tr><!-- tr finish -->
                             

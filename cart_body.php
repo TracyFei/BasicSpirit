@@ -87,8 +87,7 @@ include("functions/functions.php");
                
                <a href="index.php" class="navbar-brand home"><!-- navbar-brand home Begin -->
                    
-                   <img src="images/ecom-store-logo.png" alt="M-dev-Store Logo" class="hidden-xs">
-                   <img src="images/ecom-store-logo-mobile.png" alt="M-dev-Store Logo Mobile" class="visible-xs">
+                   <img src="images/basicSpiritLogo.jpg" alt="Basic Spirt Logo" class="hidden-xs">
                    
                </a><!-- navbar-brand home Finish -->
                
@@ -229,7 +228,7 @@ include("functions/functions.php");
                        
                        $select_cart = "select * from cart where ip_add='$ip_add'";
                        
-                       $run_cart = mysqli_query($con,$select_cart);
+                       $run_cart = mysqli_query($conn,$select_cart);
                        
                        $count = mysqli_num_rows($run_cart);
                        
@@ -274,7 +273,7 @@ include("functions/functions.php");
                                        
                                        $get_products = "select * from products where product_id='$pro_id'";
                                        
-                                       $run_products = mysqli_query($con,$get_products);
+                                       $run_products = mysqli_query($conn,$get_products);
                                        
                                        while($row_products = mysqli_fetch_array($run_products)){
                                            
@@ -395,7 +394,7 @@ include("functions/functions.php");
                
                 function update_cart(){
                     
-                    global $con;
+                    global $conn;
                     
                     if(isset($_POST['update'])){
                         
@@ -403,7 +402,7 @@ include("functions/functions.php");
                             
                             $delete_product = "delete from cart where p_id='$remove_id'";
                             
-                            $run_delete = mysqli_query($con,$delete_product);
+                            $run_delete = mysqli_query($conn,$delete_product);
                             
                             if($run_delete){
                                 
@@ -432,7 +431,7 @@ include("functions/functions.php");
                    
                    $get_products = "select * from products order by rand() LIMIT 0,3";
                    
-                   $run_products = mysqli_query($con,$get_products);
+                   $run_products = mysqli_query($conn,$get_products);
                    
                    while($row_products=mysqli_fetch_array($run_products)){
                        

@@ -1,11 +1,6 @@
 <?php
     $active='Cart';
-    include("includes/header.php");
-    
-    require 'vendor/autoload.php';
-
-    
-    
+    include("includes/header.php"); 
 ?>
    
    <div id="content"><!-- #content Begin -->

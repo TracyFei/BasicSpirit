@@ -42,10 +42,10 @@
                                 <th> Invoice No: </th>
                                 <th> Product Name: </th>
                                 <th> Product Qty: </th>
-                                <th> Product Size: </th>
+                                <!-- <th> Product Size: </th> -->
                                 <th> Order Date: </th>
                                 <th> Total Amount: </th>
-                                <th> Status: </th>
+                                <!-- <th> Status: </th> -->
                                 <th> Delete: </th>
                             </tr><!-- tr finish -->
                         </thead><!-- thead finish -->
@@ -112,10 +112,10 @@
                                 <td> <?php echo $invoice_no; ?></td>
                                 <td> <?php echo $product_title; ?> </td>
                                 <td> <?php echo $qty; ?></td>
-                                <td> <?php echo $size; ?> </td>
+                                <!-- <td> <?php echo $size; ?> </td> -->
                                 <td> <?php echo $order_date; ?> </td>
                                 <td> <?php echo $order_amount; ?> </td>
-                                <td>
+                                <!-- <td>
                                     
                                     <?php 
                                     
@@ -131,7 +131,7 @@
                                     
                                     ?>
                                     
-                                </td>
+                                </td> -->
                                 <td> 
                                      
                                      <a href="index.php?delete_order=<?php echo $order_id; ?>">
