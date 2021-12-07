@@ -114,7 +114,7 @@ if(isset($_POST['submit'])){
 
     $insert_term = "insert into terms (term_title,term_link,term_desc) values ('$term_title','$term_link','$term_desc')";
 
-    $run_term = mysqli_query($con,$insert_term);
+    $run_term = mysqli_query($conn,$insert_term);
 
     if($run_term){
 

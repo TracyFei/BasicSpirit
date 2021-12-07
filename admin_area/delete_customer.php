@@ -16,7 +16,7 @@
         
         $delete_c = "delete from customers where customer_id='$delete_id'";
         
-        $run_delete = mysqli_query($con,$delete_c);
+        $run_delete = mysqli_query($conn,$delete_c);
         
         if($run_delete){
             

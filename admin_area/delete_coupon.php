@@ -16,7 +16,7 @@
         
         $delete_coupon = "delete from coupons where coupon_id='$delete_coupon_id'";
         
-        $run_delete = mysqli_query($con,$delete_coupon);
+        $run_delete = mysqli_query($conn,$delete_coupon);
         
         if($run_delete){
             

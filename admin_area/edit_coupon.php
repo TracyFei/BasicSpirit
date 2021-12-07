@@ -14,7 +14,7 @@ if(isset($_GET['edit_coupon'])){
 
     $edit_id = $_GET['edit_coupon'];
     $edit_coupon = "select * from coupons where coupon_id='$edit_id'";
-    $run_edit_coupon = mysqli_query($con,$edit_coupon);
+    $run_edit_coupon = mysqli_query($conn,$edit_coupon);
     $row_edit_coupon = mysqli_fetch_array($run_edit_coupon);
 
     $coup_id = $row_edit_coupon['coupon_id'];
@@ -26,7 +26,7 @@ if(isset($_GET['edit_coupon'])){
     $prod_id = $row_edit_coupon['product_id'];
 
     $get_products = "select * from products where product_id='$prod_id'";
-    $run_products = mysqli_query($con,$get_products);
+    $run_products = mysqli_query($conn,$get_products);
     $row_products = mysqli_fetch_array($run_products);
 
     $product_id = $row_products['product_id'];
@@ -187,7 +187,7 @@ if(isset($_POST['update'])){
     $coupon_pro_id = $_POST['product_id'];
 
     $update_coupon = "update coupons set product_id='$coupon_pro_id',coupon_title='$coupon_title',coupon_price='$coupon_price',coupon_code='$coupon_code',coupon_limit='$coupon_limit',coupon_used='$coup_used' where coupon_id='$coup_id'";
-    $run_update_coupon = mysqli_query($con,$update_coupon);
+    $run_update_coupon = mysqli_query($conn,$update_coupon);
 
     if($run_update_coupon){
 

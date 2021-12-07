@@ -16,7 +16,7 @@
         
         $edit_cat_query = "select * from categories where cat_id='$edit_cat_id'";
         
-        $run_edit = mysqli_query($con,$edit_cat_query);
+        $run_edit = mysqli_query($conn,$edit_cat_query);
         
         $row_edit = mysqli_fetch_array($run_edit);
         
@@ -179,7 +179,7 @@
                 
                 $update_cat = "update categories set cat_title='$cat_title',cat_top='$cat_top' where cat_id='$cat_id'";
                 
-                $run_cat = mysqli_query($con,$update_cat);
+                $run_cat = mysqli_query($conn,$update_cat);
                 
                 if($run_cat){
                     

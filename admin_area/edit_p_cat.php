@@ -16,7 +16,7 @@
         
         $edit_p_cat_query = "select * from product_categories where p_cat_id='$edit_p_cat_id'";
         
-        $run_edit = mysqli_query($con,$edit_p_cat_query);
+        $run_edit = mysqli_query($conn,$edit_p_cat_query);
         
         $row_edit = mysqli_fetch_array($run_edit);
         

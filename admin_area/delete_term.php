@@ -16,7 +16,7 @@
         
         $delete_term = "delete from terms where term_id='$delete_term_id'";
         
-        $run_delete_term = mysqli_query($con,$delete_term);
+        $run_delete_term = mysqli_query($conn,$delete_term);
         
         if($run_delete_term){
             

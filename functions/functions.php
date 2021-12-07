@@ -389,8 +389,17 @@ function getProducts(){
     $sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
     $get_products = "select * from products ".$sWhere;
     $run_products = mysqli_query($db,$get_products);
+    $itemIndex = 0;
+    echo "
+    <div class='row'>
+    ";
     while($row_products=mysqli_fetch_array($run_products)){
-        
+        if ($itemIndex%3 == 0 && $itemIndex != 0)
+        {
+            echo "
+            <div class='row'>
+            ";
+        }
         $pro_id = $row_products['product_id'];
         
         $pro_title = $row_products['product_title'];
@@ -412,7 +421,6 @@ function getProducts(){
             $product_sale_price = "";
         
         echo "
-        
         <div class='col-md-4 col-sm-6 center-responsive'>
         
             <div class='product'>
@@ -465,8 +473,20 @@ function getProducts(){
         </div>
         
         ";
+
+        if ($itemIndex%3 == 2)
+        {
+            echo "
+            </div>
+            ";
+        }
+
+        $itemIndex++;
         
     }
+    echo "
+    </div>
+    ";
 
 }
 
@@ -619,24 +639,33 @@ function checkTxnid($txnid) {
  * @param array $data Payment data
  * @return int|bool ID of new payment or false if failed
  */
-function addPayment($data) {
+function addPayment() {
 	global $db;
 
-	if (is_array($data)) {
+	$data = [
+		// 'item_name' => $_POST['item_name'],
+		'item_id' => '332',
+		'payment_status' => '2443',
+		'payment_amount' => 4.5,
+		// 'payment_currency' => $_POST['mc_currency'],
+		'txn_id' => '5556',
+		// 'receiver_email' => $_POST['receiver_email'],
+		// 'payer_email' => $_POST['payer_email'],
+		// 'custom' => $_POST['custom'],
+	];
 		$stmt = $db->prepare('INSERT INTO `payment` (txnid, payment_amount, payment_status, itemid, createdtime) VALUES(?, ?, ?, ?, ?)');
 		$stmt->bind_param(
 			'sdsss',
 			$data['txn_id'],
 			$data['payment_amount'],
 			$data['payment_status'],
-			$data['item_number'],
+			$data['item_id'],
 			date('Y-m-d H:i:s')
 		);
 		$stmt->execute();
 		$stmt->close();
 
 		return $db->insert_id;
-	}
 
 	return false;
 }

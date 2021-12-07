@@ -16,7 +16,7 @@
         
         $delete_user = "delete from admins where admin_id='$delete_user_id'";
         
-        $run_delete = mysqli_query($con,$delete_user);
+        $run_delete = mysqli_query($conn,$delete_user);
         
         if($run_delete){
             

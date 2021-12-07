@@ -121,7 +121,7 @@
               
               $insert_p_cat = "insert into product_categories (p_cat_title,p_cat_top,p_cat_image) values ('$p_cat_title','$p_cat_top','$p_cat_image')";
               
-              $run_p_cat = mysqli_query($con,$insert_p_cat);
+              $run_p_cat = mysqli_query($conn,$insert_p_cat);
               
               if($run_p_cat){
                   

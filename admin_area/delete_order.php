@@ -16,7 +16,7 @@
         
         $delete_order = "delete from pending_orders where order_id='$delete_id'";
         
-        $run_delete = mysqli_query($con,$delete_order);
+        $run_delete = mysqli_query($conn,$delete_order);
         
         if($run_delete){
             

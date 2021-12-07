@@ -117,7 +117,7 @@
               
               $update_box = "update boxes_section set box_title='$box_title',box_desc='$box_desc' where box_id='$box_id'";
               
-              $run_box = mysqli_query($con,$update_box);
+              $run_box = mysqli_query($conn,$update_box);
               
               if($run_box){
                   

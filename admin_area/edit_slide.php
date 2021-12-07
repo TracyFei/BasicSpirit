@@ -16,7 +16,7 @@
         
         $edit_slide = "select * from slider where slide_id='$edit_slide_id'";
         
-        $run_edit_slide = mysqli_query($con,$edit_slide);
+        $run_edit_slide = mysqli_query($conn,$edit_slide);
         
         $row_edit_slide = mysqli_fetch_array($run_edit_slide);
         
@@ -140,7 +140,7 @@
         
         $update_slide = "update slider set slide_name='$slide_name',slide_url='$slide_url',slide_image='$slide_image' where slide_id='$slide_id'";
         
-        $run_update_slide = mysqli_query($con,$update_slide);
+        $run_update_slide = mysqli_query($conn,$update_slide);
         
         if($run_update_slide){
             

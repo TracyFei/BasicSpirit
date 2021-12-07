@@ -89,7 +89,7 @@
         $box_desc = $_POST['box_desc'];
 
         $insert_box ="insert into boxes_section (box_title,box_desc) values ('$box_title','$box_desc')";
-        $run_box = mysqli_query($con,$insert_box);
+        $run_box = mysqli_query($conn,$insert_box);
 
         echo "<script>alert('New Box Has Been Inserted')</script>";
         echo "<script>window.open('index.php?view_boxes','_self')</script>";
