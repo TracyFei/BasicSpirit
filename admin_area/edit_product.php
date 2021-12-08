@@ -38,13 +38,13 @@
         
         $p_price = $row_edit['product_price'];
         
-        $p_sale = $row_edit['product_sale'];
+        // $p_sale = $row_edit['product_sale'];
         
         $p_keywords = $row_edit['product_keywords'];
         
         $p_desc = $row_edit['product_desc'];
         
-        $p_label = $row_edit['product_label'];
+        // $p_label = $row_edit['product_label'];
         
     }
         
@@ -64,7 +64,7 @@
         
         $row_p_cat = mysqli_fetch_array($run_p_cat);
         
-        $p_cat_title = $row_p_cat['p_cat_title'];
+        // $p_cat_title = $row_p_cat['p_cat_title'];
         
         $get_cat = "select * from categories where cat_id='$cat'";
         
@@ -137,49 +137,49 @@
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
-                      <label class="col-md-3 control-label"> Manufacturer </label> 
+                      <!-- <label class="col-md-3 control-label"> Manufacturer </label> 
                       
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                      <div class="col-md-6">
                           
-                          <select name="manufacturer" class="form-control"><!-- form-control Begin -->
+                          <select name="manufacturer" class="form-control"> -->
 
-                              <option disabled value="Select Manufacturer">Select Manufacturer</option>
+                              <!-- <option disabled value="Select Manufacturer">Select Manufacturer</option>
                               
                               <option selected value="<?php echo $manufacturer_id; ?>"> <?php echo $manufacturer_title; ?> </option>
                               
                               <?php 
                               
-                              $get_manufacturer = "select * from manufacturers";
-                              $run_manufacturer = mysqli_query($con,$get_manufacturer);
+                            //   $get_manufacturer = "select * from manufacturers";
+                            //   $run_manufacturer = mysqli_query($con,$get_manufacturer);
                               
-                              while ($row_manufacturer=mysqli_fetch_array($run_manufacturer)){
+                            //   while ($row_manufacturer=mysqli_fetch_array($run_manufacturer)){
                                   
-                                  $manufacturer_id = $row_manufacturer['manufacturer_id'];
-                                  $manufacturer_title = $row_manufacturer['manufacturer_title'];
+                            //       $manufacturer_id = $row_manufacturer['manufacturer_id'];
+                            //       $manufacturer_title = $row_manufacturer['manufacturer_title'];
                                   
-                                  echo "
+                            //       echo "
                                   
-                                  <option value='$manufacturer_id'> $manufacturer_title </option>
+                            //       <option value='$manufacturer_id'> $manufacturer_title </option>
                                   
-                                  ";
+                            //       ";
                                   
-                              }
+                            //   }
                               
-                              ?>
-                              
-                          </select><!-- form-control Finish -->
+                              ?> -->
+<!--                               
+                          </select>
                           
-                      </div><!-- col-md-6 Finish -->
+                      </div>
                        
-                   </div><!-- form-group Finish -->
+                   </div> -->
                    
-                   <div class="form-group"><!-- form-group Begin -->
+                   <!-- <div class="form-group">
                        
                       <label class="col-md-3 control-label"> Product Category </label> 
                       
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                      <div class="col-md-6">
                           
-                          <select name="product_cat" class="form-control"><!-- form-control Begin -->
+                          <select name="product_cat" class="form-control">
 
                               <option disabled value="Select Product Category">Select Product Category</option>       
                               
@@ -187,29 +187,29 @@
                               
                               <?php 
                               
-                              $get_p_cats = "select * from product_categories";
-                              $run_p_cats = mysqli_query($conn,$get_p_cats);
+                            //   $get_p_cats = "select * from product_categories";
+                            //   $run_p_cats = mysqli_query($conn,$get_p_cats);
                               
-                              while ($row_p_cats=mysqli_fetch_array($run_p_cats)){
+                            //   while ($row_p_cats=mysqli_fetch_array($run_p_cats)){
                                   
-                                  $p_cat_id = $row_p_cats['p_cat_id'];
-                                  $p_cat_title = $row_p_cats['p_cat_title'];
+                            //       $p_cat_id = $row_p_cats['p_cat_id'];
+                            //       $p_cat_title = $row_p_cats['p_cat_title'];
                                   
-                                  echo "
+                            //       echo "
                                   
-                                  <option value='$p_cat_id'> $p_cat_title </option>
+                            //       <option value='$p_cat_id'> $p_cat_title </option>
                                   
-                                  ";
+                            //       ";
                                   
-                              }
+                            //   }
                               
                               ?>
                               
-                          </select><!-- form-control Finish -->
+                          </select>
                           
-                      </div><!-- col-md-6 Finish -->
+                      </div>
                        
-                   </div><!-- form-group Finish -->
+                   </div> -->
                    
                    <div class="form-group"><!-- form-group Begin -->
                        
@@ -303,25 +303,25 @@
                       
                       <div class="col-md-6"><!-- col-md-6 Begin -->
                           
-                          <input name="product_price" type="text" class="form-control" required value="<?php echo $p_price; ?>">
+                          <input name="product_price" type="text" class="form-control" required value="<?php echo number_format((float)$p_price, 2, '.', ''); ?>">
                           
                       </div><!-- col-md-6 Finish -->
                        
                    </div><!-- form-group Finish -->
                    
-                   <div class="form-group"><!-- form-group Begin -->
+                   <!-- <div class="form-group">
                        
                       <label class="col-md-3 control-label"> Sale Price </label> 
                       
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                      <div class="col-md-6">
                           
                           <input name="product_sale" type="text" class="form-control" required value="<?php echo $p_sale; ?>">
                           
-                      </div><!-- col-md-6 Finish -->
+                      </div>
                        
-                   </div><!-- form-group Finish -->
+                   </div> -->
                    
-                   <div class="form-group"><!-- form-group Begin -->
+                   <div class="form-group">
                        
                       <label class="col-md-3 control-label"> Product Keywords </label> 
                       
@@ -349,23 +349,23 @@
                        
                    </div><!-- form-group Finish -->
                    
-                   <div class="form-group"><!-- form-group Begin -->
+                   <!-- <div class="form-group">
                        
                       <label class="col-md-3 control-label"> Product Label </label> 
                       
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                      <div class="col-md-6">
                           
                           <input name="product_label" type="text" class="form-control" required value="<?php echo $p_label; ?>">
                           
-                      </div><!-- col-md-6 Finish -->
+                      </div>
                        
-                   </div><!-- form-group Finish -->
+                   </div> -->
                    
-                   <div class="form-group"><!-- form-group Begin -->
+                   <div class="form-group">
                        
                       <label class="col-md-3 control-label"></label> 
                       
-                      <div class="col-md-6"><!-- col-md-6 Begin -->
+                      <div class="col-md-6">
                           
                           <input name="update" value="Update Product" type="submit" class="btn btn-primary form-control">
                           

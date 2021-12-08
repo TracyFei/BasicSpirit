@@ -73,21 +73,21 @@
                     
                     </div><!-- form-group finish -->
                     
-                    <div class="form-group"><!-- form-group 2 begin -->
+                    <!-- <div class="form-group">
                     
-                        <label for="" class="control-label col-md-3"><!-- control-label col-md-3 begin --> 
+                        <label for="" class="control-label col-md-3">
                         
                             Choose As Top Manufacturer
                         
-                        </label><!-- control-label col-md-3 finish --> 
+                        </label>
                         
-                        <div class="col-md-6"><!-- col-md-6 begin -->
+                        <div class="col-md-6">
                         
                         <input name="cat_top" type="radio" value="yes"
 
                             <?php 
                             
-                                if($cat_top=='no'){}else{echo "checked='checked'";}
+                                //if($cat_top=='no'){}else{echo "checked='checked'";}
                             
                             ?>
                         
@@ -98,16 +98,16 @@
                         
                             <?php 
                             
-                                if($cat_top=='no'){echo "checked='checked'";}
+                                //if($cat_top=='no'){echo "checked='checked'";}
                             
                             ?>
                         
                         >
                         <label>No</label>
                         
-                        </div><!-- col-md-6 finish -->
+                        </div>
                     
-                    </div><!-- form-group 2 finish -->
+                    </div> -->
                     
                     <div class="form-group"><!-- form-group 3 begin -->
                     

@@ -20,12 +20,12 @@
 
     addOrder($ip_add, $run_cart);
 
-    // $date = date('mdYhis', time());
-    // $fileName = './data/'.$date.'.xlsx';
+    $date = date('mdYhis', time());
+    $fileName = './data/'.$date.'.xlsx';
 
-    // saveInvoice($run_cart, $fileName);
+    saveInvoice($run_cart, $fileName);
 
-    // sendEmail($fileName);
+    sendEmail($fileName);
 
 
     function sendEmail($fileName)

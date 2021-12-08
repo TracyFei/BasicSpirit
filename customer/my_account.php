@@ -158,17 +158,17 @@ include("functions/functions.php");
                    
                </a><!-- btn navbar-btn btn-primary Finish -->
                
-               <div class="navbar-collapse collapse right"><!-- navbar-collapse collapse right Begin -->
+               <!-- <div class="navbar-collapse collapse right">
                    
-                   <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search"><!-- btn btn-primary navbar-btn Begin -->
+                   <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search">
                        
                        <span class="sr-only">Toggle Search</span>
                        
                        <i class="fa fa-search"></i>
                        
-                   </button><!-- btn btn-primary navbar-btn Finish -->
+                   </button>
                    
-               </div><!-- navbar-collapse collapse right Finish -->
+               </div> -->
                
                <div class="collapse clearfix" id="search"><!-- collapse clearfix Begin -->
                    

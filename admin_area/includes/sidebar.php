@@ -120,24 +120,24 @@
                 
             </li><!-- li finish -->
             
-            <li><!-- li begin -->
-                <a href="#" data-toggle="collapse" data-target="#p_cat"><!-- a href begin -->
+            <!-- <li>
+                <a href="#" data-toggle="collapse" data-target="#p_cat">
                         
                         <i class="fa fa-fw fa-edit"></i> Products Categories
                         <i class="fa fa-fw fa-caret-down"></i>
                         
-                </a><!-- a href finish -->
+                </a>
                 
-                <ul id="p_cat" class="collapse"><!-- collapse begin -->
-                    <li><!-- li begin -->
+                <ul id="p_cat" class="collapse">
+                    <li>
                         <a href="index.php?insert_p_cat"> Insert Product Category </a>
-                    </li><!-- li finish -->
-                    <li><!-- li begin -->
+                    </li>
+                    <li>
                         <a href="index.php?view_p_cats"> View Products Categories </a>
-                    </li><!-- li finish -->
-                </ul><!-- collapse finish -->
+                    </li>
+                </ul>
                 
-            </li><!-- li finish -->
+            </li> -->
             
             <li><!-- li begin -->
                 <a href="#" data-toggle="collapse" data-target="#cat"><!-- a href begin -->
@@ -196,24 +196,24 @@
                 
             </li><!-- li finish -->
             
-            <li><!-- li begin -->
-                <a href="#" data-toggle="collapse" data-target="#coupon"><!-- a href begin -->
+            <!-- <li>
+                <a href="#" data-toggle="collapse" data-target="#coupon">
                         
                         <i class="fa fa-fw fa-book"></i> Coupons
                         <i class="fa fa-fw fa-caret-down"></i>
                         
-                </a><!-- a href finish -->
+                </a>
                 
-                <ul id="coupon" class="collapse"><!-- collapse begin -->
-                    <li><!-- li begin -->
+                <ul id="coupon" class="collapse">
+                    <li>
                         <a href="index.php?insert_coupon"> Insert Coupon </a>
-                    </li><!-- li finish -->
-                    <li><!-- li begin -->
+                    </li>
+                    <li>
                         <a href="index.php?view_coupons"> View Coupons </a>
-                    </li><!-- li finish -->
-                </ul><!-- collapse finish -->
+                    </li>
+                </ul>
                 
-            </li><!-- li finish -->
+            </li> -->
             
             <li><!-- li begin -->
                 <a href="#" data-toggle="collapse" data-target="#terms"><!-- a href begin -->
@@ -252,11 +252,11 @@
                 </a><!-- a href finish -->
             </li><!-- li finish -->
             
-            <li><!-- li begin -->
-                <a href="index.php?edit_css"><!-- a href begin -->
+            <!-- <li>li begin
+                <a href="index.php?edit_css">a href begin
                     <i class="fa fa-fw fa-pencil"></i> CSS Editor
-                </a><!-- a href finish -->
-            </li><!-- li finish -->
+                </a>a href finish
+            </li>li finish -->
             
             <li><!-- li begin -->
                 <a href="#" data-toggle="collapse" data-target="#users"><!-- a href begin -->

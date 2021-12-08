@@ -106,45 +106,45 @@
         </div><!-- panel panel-green finish -->
     </div><!-- col-lg-3 col-md-6 finish -->
    
-    <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 begin -->
-        <div class="panel panel-orange"><!-- panel panel-yellow begin -->
+    <!-- <div class="col-lg-3 col-md-6">col-lg-3 col-md-6 begin
+        <div class="panel panel-orange">panel panel-yellow begin -->
             
-            <div class="panel-heading"><!-- panel-heading begin -->
-                <div class="row"><!-- panel-heading row begin -->
-                    <div class="col-xs-3"><!-- col-xs-3 begin -->
+            <!-- <div class="panel-heading">panel-heading begin
+                <div class="row">panel-heading row begin
+                    <div class="col-xs-3">col-xs-3 begin
                        
                         <i class="fa fa-tags fa-5x"></i>
                         
-                    </div><!-- col-xs-3 finish -->
+                    </div>col-xs-3 finish
                     
-                    <div class="col-xs-9 text-right"><!-- col-xs-9 text-right begin -->
+                    <div class="col-xs-9 text-right">col-xs-9 text-right begin
                         <div class="huge"> <?php echo $count_p_categories; ?> </div>
                            
                         <div> Product Categories </div>
                         
-                    </div><!-- col-xs-9 text-right finish -->
+                    </div>col-xs-9 text-right finish
                     
-                </div><!-- panel-heading row finish -->
-            </div><!-- panel-heading finish -->
+                </div>panel-heading row finish
+            </div>panel-heading finish -->
             
-            <a href="index.php?view_p_cats"><!-- a href begin -->
-                <div class="panel-footer"><!-- panel-footer begin -->
+            <!-- <a href="index.php?view_p_cats">a href begin
+                <div class="panel-footer">panel-footer begin -->
                    
-                    <span class="pull-left"><!-- pull-left begin -->
-                        View Details 
-                    </span><!-- pull-left finish -->
+                    <!-- <span class="pull-left">pull-left begin -->
+                        <!-- View Details 
+                    </span>pull-left finish -->
                     
-                    <span class="pull-right"><!-- pull-right begin --> 
-                        <i class="fa fa-arrow-circle-right"></i> 
-                    </span><!-- pull-right finish --> 
+                    <!-- <span class="pull-right">pull-right begin  -->
+                        <!-- <i class="fa fa-arrow-circle-right"></i>  -->
+                    <!-- </span>pull-right finish  -->
                     
-                    <div class="clearfix"></div>
+                    <!-- <div class="clearfix"></div> -->
                     
-                </div><!-- panel-footer finish -->
-            </a><!-- a href finish -->
-            
-        </div><!-- panel panel-yellow finish -->
-    </div><!-- col-lg-3 col-md-6 finish -->
+                <!-- </div>panel-footer finish -->
+            <!-- </a>a href finish -->
+<!--             
+        </div>panel panel-yellow finish
+    </div>col-lg-3 col-md-6 finish -->
    
     <div class="col-lg-3 col-md-6"><!-- col-lg-3 col-md-6 begin -->
         <div class="panel panel-red"><!-- panel panel-red begin -->

@@ -157,7 +157,7 @@ if(isset($_GET['pro_id'])){
                
                <a href="index.php" class="navbar-brand home"><!-- navbar-brand home Begin -->
                    
-                   <img src="images/basicSpiritLogo.png" alt="Basic Spirit Logo" class="hidden-xs">
+                   <img src="images/basicSpiritLogo.jpg" alt="Basic Spirit Logo" class="hidden-xs">
                    
                </a><!-- navbar-brand home Finish -->
                
@@ -321,22 +321,22 @@ if(isset($_GET['pro_id'])){
                                    
                                </div><!-- form-group Finish -->
                                
-                               <div class="form-group"><!-- form-group Begin -->
+                               <!-- <div class="form-group">form-group Begin
                                    <label class="col-md-5 control-label">Product Size</label>
                                    
-                                   <div class="col-md-7"><!-- col-md-7 Begin -->
+                                   <div class="col-md-7">col-md-7 Begin
                                        
                                        <select name="product_size" class="form-control" required oninput="setCustomValidity('')" oninvalid="setCustomValidity('Must pick 1 size for the product')"><!-- form-control Begin -->
                                           
-                                           <option disabled selected>Select a Size</option>
+                                           <!-- <option disabled selected>Select a Size</option>
                                            <option>Small</option>
                                            <option>Medium</option>
-                                           <option>Large</option>
+                                           <option>Large</option> -->
                                            
-                                       </select><!-- form-control Finish -->
+                                       <!-- </select>form-control Finish
                                        
-                                   </div><!-- col-md-7 Finish -->
-                               </div><!-- form-group Finish -->
+                                   </div>col-md-7 Finish
+                               </div>form-group Finish --> 
                                
                                <?php 
 
@@ -445,13 +445,6 @@ if(isset($_GET['pro_id'])){
                        
                    </p>
                    
-                       <h4>Size</h4>
-                       
-                       <ul>
-                           <li>Small</li>
-                           <li>Medium</li>
-                           <li>Large</li>
-                       </ul>  
                        
                        <hr>
                    

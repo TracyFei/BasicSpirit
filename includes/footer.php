@@ -52,11 +52,12 @@
                 
                 <p><!-- p Start -->
                     
-                    <strong>Basic Spirit Media inc.</strong>
-                    <br/>bla bla
-                    <br/>bla bla
+                    <strong>PO Box number to Basic Spirit:</strong>
+                    <br/>344 Richardson Road,
+                    <br/>Mt Roskill,
+                    <br/>AUCKLAND 1041
                     <br/>09 536 7489
-                    <br/>BasicSpiritAdmin@gmail.com
+                    <br/>basicspirit@basicspirit.nz
                     <br/><strong>Mrs Shvastanee</strong>
                     
                 </p><!-- p Finish -->
@@ -72,9 +73,7 @@
                 
                 <p class="social">
                     <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
                     <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-google-plus"></a>
                     <a href="#" class="fa fa-envelope"></a>
                 </p>
                 
