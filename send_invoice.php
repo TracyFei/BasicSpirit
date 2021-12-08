@@ -13,27 +13,21 @@
 
                        
     global $db;
-    $ip_add = getRealIpUser();
-    $select_cart = "select * from cart where ip_add='$ip_add'";
-
-    $run_cart = mysqli_query($db,$select_cart);
-
-    addOrder($ip_add, $run_cart);
-
     $date = date('mdYhis', time());
     $fileName = './data/'.$date.'.xlsx';
-
-    saveInvoice($run_cart, $fileName);
-
+    saveInvoice($fileName);
     sendEmail($fileName);
+    
+    unlink($fileName);
 
+    addOrder($ip_add, $run_cart);
 
     function sendEmail($fileName)
     {
         $mail = new PHPMailer(true);
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -62,18 +56,33 @@
         }
     }
 
-    function saveInvoice($run_cart, $fileName)
+    function saveInvoice($fileName)
     {
+        global $db;
+        $ip_add = getRealIpUser();
+        $select_cart = "select * from cart where ip_add='$ip_add'";
+
+        $run_cart = mysqli_query($db,$select_cart);
+
         $inputFileName = './data/BeautifulThings.xlsx';
         $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileName);
         $worksheet = $spreadsheet->getActiveSheet();
 
         $row = 21;
         while($record=mysqli_fetch_array($run_cart)){
+
+                 
+            global $db;
+            $pid = $record['p_id'];
+            $select_products = "select * from products where product_id='$pid'";
+            $run_products = mysqli_query($db,$select_products);
             
+            while($row_products = mysqli_fetch_array($run_products)){
+                $product_title = $row_products['product_title'];
+                $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow(6, $row, $product_title);
+            }
             $worksheet->setCellValueByColumnAndRow(4, $row, $record['qty']);
-            $worksheet->setCellValueByColumnAndRow(5, $row, $record['p_id']);
-            // $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow($row, 6, $record['p_id']);
+            $worksheet->setCellValueByColumnAndRow(5, $row, $pid);
             $worksheet->setCellValueByColumnAndRow(7, $row, $record['p_price']);
             $worksheet->setCellValueByColumnAndRow(8, $row, '=D'.$row.'*G'.$row);  
             $row++;
