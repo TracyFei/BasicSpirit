@@ -51,7 +51,7 @@
                                        <th colspan="2">Product</th>
                                        <th>Quantity</th>
                                        <th>Unit Price</th>
-                                       <th>Size</th>
+                                       <!-- <th>Size</th> -->
                                        <th colspan="1">Delete</th>
                                        <th colspan="2">Sub-Total</th>
                                        
@@ -121,11 +121,11 @@
                                            
                                        </td>
                                        
-                                       <td>
+                                       <!-- <td>
                                            
-                                           <?php echo $pro_size; ?>
+                                           <?php //echo $pro_size; ?>
                                            
-                                       </td>
+                                       </td> -->
                                        
                                        <td>
                                            

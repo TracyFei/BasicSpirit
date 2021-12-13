@@ -523,5 +523,15 @@ body{
     height: 300px;
 }
 
+.termsBackground{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.termsSpecial { font-style: italic;
+    text-decoration: underline;
+    font-weight: bold; }
   
 /* styling the label finish */
