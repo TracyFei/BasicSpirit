@@ -3,12 +3,11 @@
   <div class="box-header"><!-- box-header Begin -->
       
       <center><!-- center Begin -->
+        
           
+          <p class="lead"> Already have our account? </p>
           <h1> Login </h1>
           
-          <p class="lead"> Already have our account..? </p>
-          
-          <p class="text-muted"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, maxime. Laudantium omnis, ullam, fuga officia provident error corporis consectetur aliquid corrupti recusandae minus ipsam quasi. Perspiciatis nemo, nostrum magni odit! </p>
           
       </center><!-- center Finish -->
       
@@ -41,14 +40,16 @@
           </button>
           
       </div><!-- text-center Finish -->     
-      
+      <br><br>
   </form><!-- form Finish -->
    
   <center><!-- center Begin -->
+
+  <p class="lead"> Don't have our account? </p>
       
      <a href="customer_register.php">
          
-         <h3> Dont have account..? Register here </h3>
+         <h3> Register here </h3>
          
      </a> 
       

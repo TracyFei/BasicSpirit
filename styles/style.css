@@ -532,6 +532,7 @@ body{
 
 .termsSpecial { font-style: italic;
     text-decoration: underline;
-    font-weight: bold; }
+    font-weight: bold; 
+font-size: larger;}
   
 /* styling the label finish */
