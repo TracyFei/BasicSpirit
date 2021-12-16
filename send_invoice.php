@@ -83,6 +83,7 @@
             }
             $worksheet->setCellValueByColumnAndRow(4, $row, $record['qty']);
             $worksheet->setCellValueByColumnAndRow(5, $row, $pid);
+            // $worksheet->setCellValueByColumnAndRow()
             $worksheet->setCellValueByColumnAndRow(7, $row, $record['p_price']);
             $worksheet->setCellValueByColumnAndRow(8, $row, '=D'.$row.'*G'.$row);  
             $row++;
