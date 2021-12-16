@@ -211,6 +211,7 @@
                                 <th> Customer Email: </th>
                                 <th> Invoice No: </th>
                                 <th> Product ID: </th>
+                                <th>Product Code:</th>
                                 <th> Product Qty: </th>
                                 <!-- <th> Product Size: </th>
                                 <th> Status: </th> -->
@@ -244,6 +245,8 @@
                                     $size = $row_order['size'];
                                     
                                     $order_status = $row_order['order_status'];
+
+                                    $pro_code = $row_order['pro_code'];
                                     
                                     $i++;
                             
@@ -271,6 +274,7 @@
                                 </td>
                                 <td> <?php echo $invoice_no; ?> </td>
                                 <td> <?php echo $product_id; ?> </td>
+                                <td><?php echo $pro_code ?></td>
                                 <td> <?php echo $qty; ?> </td>
                                 <!-- <td> <?php echo $size; ?> </td>
                                 <td>

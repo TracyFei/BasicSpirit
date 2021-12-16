@@ -40,6 +40,7 @@
                                 <th> No: </th>
                                 <th> Customer Email: </th>
                                 <th> Invoice No: </th>
+                                <th>Product Code</th>
                                 <th> Product Name: </th>
                                 <th> Product Qty: </th>
                                 <!-- <th> Product Size: </th> -->
@@ -101,6 +102,10 @@
                                     $order_date = $row_c_order['order_date'];
                                     
                                     $order_amount = $row_c_order['due_amount'];
+
+                                    $pro_code = $row_c_order['pro_code'];
+
+                                    // $pro_code = 
                                     
                                     $i++;
                             
@@ -110,6 +115,7 @@
                                 <td> <?php echo $i; ?> </td>
                                 <td> <?php echo $customer_email; ?> </td>
                                 <td> <?php echo $invoice_no; ?></td>
+                                <td><?php echo $pro_code ?></td>
                                 <td> <?php echo $product_title; ?> </td>
                                 <td> <?php echo $qty; ?></td>
                                 <!-- <td> <?php echo $size; ?> </td> -->

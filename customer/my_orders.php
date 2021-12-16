@@ -27,11 +27,13 @@
                 <th> ON: </th>
                 <th> Due Amount: </th>
                 <th> Invoice No: </th>
+                <th>Product Code:</th>
                 <th> Qty: </th>
                 <!-- <th> Size: </th> -->
                 <th> Order Date:</th>
                 <!-- <th> Paid / Unpaid: </th>
                 <th> Status: </th> -->
+                
                 
             </tr><!--  tr Finish  -->
             
@@ -72,6 +74,8 @@
                 $order_date = substr($row_orders['order_date'],0,11);
                 
                 $order_status = $row_orders['order_status'];
+
+                $pro_code = $row_orders['pro_code'];
                 
                 $i++;
                 
@@ -92,6 +96,7 @@
                 <th> <?php echo $i; ?> </th>
                 <td> $<?php echo number_format((float)$due_amount, 2, '.', ''); ?> </td>
                 <td> <?php echo $invoice_no; ?> </td>
+                <td><?php echo $pro_code ?></td>
                 <td> <?php echo $qty; ?> </td>
                 <!-- <td> <?php echo $size; ?> </td> -->
                 <td> <?php echo $order_date; ?> </td>
