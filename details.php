@@ -36,6 +36,8 @@ if(isset($_GET['pro_id'])){
     $pro_img2 = $row_products['product_img2'];
     
     $pro_img3 = $row_products['product_img3'];
+
+    $pro_code = $row_products['code'];
         
     //$pro_label = $row_products['product_label'];
     if (isset($_POST['Register']))
@@ -285,6 +287,7 @@ if(isset($_GET['pro_id'])){
                        <a href="shop.php?p_cat=<?php echo $p_cat_id; ?>"><?php echo $p_cat_title; ?></a>
                    </li> -->
                    <li> <?php echo $pro_title; ?> </li>
+                   
                </ul><!-- breadcrumb Finish -->
                
            </div><!-- col-md-12 Finish -->
@@ -301,7 +304,7 @@ if(isset($_GET['pro_id'])){
                    <div class="col-sm-6"><!-- col-sm-6 Begin -->
                        <div class="box"><!-- box Begin -->
                            <h1 class="text-center"> <?php echo $pro_title; ?> </h1>
-                           
+                           <h4 class="text-center"><?php echo $pro_code; ?></h4>
                            <?php //add_cart(); ?>
                            
                            <form action="add_to_cart.php?add_cart=<?php echo $product_id; ?>" class="form-horizontal" method="post"><!-- form-horizontal Begin -->

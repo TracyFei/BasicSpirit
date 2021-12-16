@@ -46,7 +46,7 @@
                                 <th> Order Date: </th>
                                 <th> Total Amount: </th>
                                 <!-- <th> Status: </th> -->
-                                <th> Delete: </th>
+                                <!-- <th> Delete: </th> -->
                             </tr><!-- tr finish -->
                         </thead><!-- thead finish -->
                         
@@ -132,15 +132,15 @@
                                     ?>
                                     
                                 </td> -->
-                                <td> 
+                                <!-- <td>  -->
                                      
-                                     <a href="index.php?delete_order=<?php echo $order_id; ?>">
+                                     <!-- <a href="index.php?delete_order=<?php //echo $order_id; ?>">
                                      
                                         <i class="fa fa-trash-o"></i> Delete
                                     
-                                     </a> 
+                                     </a>  -->
                                      
-                                </td>
+                                <!-- </td> -->
                             </tr><!-- tr finish -->
                             
                             <?php } ?>

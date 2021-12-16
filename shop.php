@@ -35,7 +35,23 @@
                 <div class='box'><!-- box Begin -->
                     <h1>Shop</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo deleniti accusamus, consequuntur illum quasi ut. Voluptate a, ipsam repellendus ut fugiat minima? Id facilis itaque autem, officiis veritatis perferendis, quaerat!
+                    The Inspiration Coin series is designed
+                    to touch the heart and delight the
+                    spirit. Collections of Inspiration Coins
+                    on your coffee table, bookcase or
+                    mantelpiece provide you with a wide
+                    range of positive thoughts and feelings
+                    and are a talking point with friends and
+                    family. Carry a finely handcrafted
+                    pewter coin in your pocket or bag and
+                    you will have a positive affirmation
+                    with you always. <br><br><br>
+                    Heart Warmers are pre-made-up bagged
+                    sets, each with three Inspiration Coins
+                    that have related and meaningful
+                    themes. 
+
+
                     </p>
                 </div><!-- box Finish -->
                
