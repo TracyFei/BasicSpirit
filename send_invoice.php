@@ -78,11 +78,11 @@
             
             while($row_products = mysqli_fetch_array($run_products)){
                 $product_title = $row_products['product_title'];
+                $product_code = $row_products['code'];
+                $worksheet->setCellValueByColumnAndRow(5, $row, $product_code);
                 $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow(6, $row, $product_title);
             }
             $worksheet->setCellValueByColumnAndRow(4, $row, $record['qty']);
-            $worksheet->setCellValueByColumnAndRow(5, $row, $pid);
-            // $worksheet->setCellValueByColumnAndRow()
             $worksheet->setCellValueByColumnAndRow(7, $row, $record['p_price']);
             $worksheet->setCellValueByColumnAndRow(8, $row, '=D'.$row.'*G'.$row);  
             $row++;
