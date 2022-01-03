@@ -51,7 +51,7 @@
                 
                 <h4>Find Us</h4>
                 
-                <p><!-- p Start -->
+                <!-- <p>
                     
                     <strong>PO Box number to Basic Spirit:</strong>
                     <br/>344 Richardson Road,
@@ -61,7 +61,7 @@
                     <br/>basicspirit@basicspirit.nz
                     <br/><strong>Mrs Shvastanee</strong>
                     
-                </p><!-- p Finish -->
+                </p> -->
                 
                 <a href="contact.php">Check Our Contact Page</a>
                 
@@ -73,8 +73,8 @@
                 <h4>Keep In Touch</h4>
                 
                 <p class="social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
+                    <!-- <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a> -->
                     <a href="#" class="fa fa-envelope"></a>
                 </p>
                 

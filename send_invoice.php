@@ -38,7 +38,8 @@
         
             //Recipients
             $mail->setFrom('mail@basicspirit.nz');
-            $mail->addAddress('tracyfeiguiyu7@gmail.com');     //Add a recipient
+            $mail->addAddress('tracyfeiguiyu7@gmail.com'); 
+            $mail->addAddress('mail@basicspirit.nz');       //Add a recipient
         
         
             //Content
