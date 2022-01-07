@@ -537,12 +537,12 @@ font-size: larger;}
 
 .invoiceBox {
     background-color: #22509a;
-    font-size: larger;
+    font-family: Tempus Sans ITC;
     color: white;
-    width: 500px;
-    height: 200px;
-    padding: 50px;
-    margin: 20px;
+    width: 550px;
+    height: 150px;
+    /* padding: 40px; */
+
   }
-  
+
 /* styling the label finish */
