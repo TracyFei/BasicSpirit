@@ -19,14 +19,15 @@ body {
   background-color: white;
 }
 </style>
-<div class="container" style="font-family: Maiandra GD; text-align: center">
+<div class="container" style="font-family: Maiandra GD; text-align: center; color: #22509a">
 
 <h1 style="font-size: 30px;">INVOICE from:</h1>
 
-<!-- WHY -->
 <div class="invoiceBox">
-<p style="font-size: 80px; padding-top: 15px">Basic Spirit</p> 
+<p style="font-size: 80px; margin: 5px">Basic Spirit</p> 
 </div>
+<h2><i>Website: https://www.basicspirit.nz<br> 
+Email: mail@basicspirit.nz</i></h2>
 </div>
 
     
