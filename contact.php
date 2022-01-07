@@ -89,33 +89,40 @@
                        if(isset($_POST['submit'])){
                            
                            /// Admin receives message with this ///
-                           
+
                            $sender_name = $_POST['name'];
                            
                            $sender_email = $_POST['email'];
-                           
+
                            $sender_subject = $_POST['subject'];
                            
                            $sender_message = $_POST['message'];
-                           
-                           $receiver_email = "mugianto4th@gmail.com";
-                           
-                           mail($receiver_email,$sender_name,$sender_subject,$sender_message,$sender_email);
+
+                           $receiver_email = "mail@basicspirit.nz";
+                        //    $headers = "MIME-Version: 1.0" . "\r\n";
+                        //     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+                            // More headers. From is required, rest other headers are optional
+                            $headers = 'From: ' . $receiver_email . '<' . $sender_email . '>';
+
+                           mail($receiver_email,$sender_subject,$sender_message,$headers,$sender_email);
                            
                            /// Auto reply to sender with this ///
                            
-                           $email = $_POST['email'];
+                        //    $email = $_POST['email'];
                            
-                           $subject = "Welcome to my website";
+                        //    $subject = "Welcome to my website";
                            
-                           $msg = "Thanks for sending us message. ASAP we will reply your message";
+                        //    $msg = "Thanks for sending us message. ASAP we will reply your message";
                            
-                           $from = "mugianto4th@gmail.com";
+                        //    $from = "mail@basicspirit.nz";
                            
-                           mail($email,$subject,$msg,$from);
+                        //    mail($email,$subject,$msg,$from);
                            
                            echo "<h2 align='center'> Your message has sent sucessfully </h2>";
-                           
+
+                           // It is mandatory to set the content-type when sending HTML email
+                            
                        }
                        
                        ?>

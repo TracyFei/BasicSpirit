@@ -534,5 +534,15 @@ body{
     text-decoration: underline;
     font-weight: bold; 
 font-size: larger;}
+
+.invoiceBox {
+    background-color: #22509a;
+    font-size: larger;
+    color: white;
+    width: 500px;
+    height: 200px;
+    padding: 50px;
+    margin: 20px;
+  }
   
 /* styling the label finish */
