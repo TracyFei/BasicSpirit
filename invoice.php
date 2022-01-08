@@ -16,10 +16,10 @@
 ?>
 <style>
 body {
-  background-color: white;
+  background-color: blueviolet;
 }
 </style>
-<div class="container" style="font-family: Maiandra GD; text-align: center; color: #22509a">
+<div class="container" style="font-family: Maiandra GD; text-align: center; color: #22509a; background-color: white; width: 800px; margin:auto">
 
 <h1 style="font-size: 30px;">INVOICE from:</h1>
 
