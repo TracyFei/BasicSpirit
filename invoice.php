@@ -19,18 +19,21 @@ body {
   background-color: blueviolet;
 }
 </style>
-<div class="container" style="font-family: Maiandra GD; text-align: center; color: #22509a; background-color: white; width: 800px; margin:auto">
+<div class="container" style="font-family: Maiandra GD; text-align: center; color: #22509a; background-color: white; width: 800px;">
 
-<h1 style="font-size: 30px;">INVOICE from:</h1>
+<h1 style="font-size: 30px; margin:auto">INVOICE from:</h1>
 
-<div class="invoiceBox">
+<div class="invoiceBox" style="margin: auto;">
 <p style="font-size: 80px; margin: 5px">Basic Spirit</p> 
 </div>
-<h2><i>Website: https://www.basicspirit.nz<br> 
+<h2 style="margin: auto;"><i>Website: https://www.basicspirit.nz<br> 
 Email: mail@basicspirit.nz</i></h2>
-</div>
 
-    
+</div>
+<!-- <div class="container" style="margin-left: 0px;">
+  <h1>Date: </h1> 
+</div> -->
+   
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
 
