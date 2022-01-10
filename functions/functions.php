@@ -691,7 +691,7 @@ function addOrder($ip_add, $run_cart) {
 
         $invoice_no = 100 + $row_order['order_id'];
     }
-    
+
     $status = 'pending';
     while($row_cart = mysqli_fetch_array($run_cart)){
         $pro_id = $row_cart['p_id'];
@@ -718,8 +718,9 @@ function addOrder($ip_add, $run_cart) {
             
             echo "<script>alert('Your orders has been submitted, Thanks')</script>";
             
-            echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
-            
+            // echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+
+            echo "<script>window.open('invoice.php','_self')</script>";
         }
         
     }

@@ -12,7 +12,11 @@
 
 <?php 
 
-    $active='Invoice';
+    
+   $active='Invoice';
+    include("includes/db.php");
+    include("functions/functions.php");
+    // global $db;
     // addOrder($ip_add, $run_cart);
 ?>
 <style>
@@ -37,8 +41,14 @@ Email: mail@basicspirit.nz</i></h2>
 </div>
 
 <div class="col-md-4 text-center"> 
-    <button id="singlebutton" name="Go Back to Main Page" class="btn btn-primary">Next Step!</button> 
+    <button id="invoiceBack" name="back button" class="btn btn-primary">Back to Main Page</button> 
 </div>
+
+<script type="text/javascript">
+    document.getElementById("invoiceBack").onclick = function () {
+      window.open('customer/my_account.php?my_orders','_self');
+    };
+</script>
    
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>

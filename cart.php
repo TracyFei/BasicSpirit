@@ -191,7 +191,7 @@
                        </div><!-- box-footer Finish -->
                        
                    </form><!-- form Finish -->
-                   <form class="paypal" action="invoice.php" method="post" id="paypal_form">
+                   <form class="paypal" action="send_invoice.php" method="post" id="paypal_form">
                         <input type="hidden" name="cmd" value="_xclick" />
                         <input type="hidden" name="no_note" value="1" />
                         <input type="hidden" name="lc" value="UK" />
