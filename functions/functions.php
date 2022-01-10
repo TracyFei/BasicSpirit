@@ -683,7 +683,15 @@ function addOrder($ip_add, $run_cart) {
     $run_customer = mysqli_query($db,$select_customer);
     $row_customer = mysqli_fetch_array($run_customer);
     $customer_id = $row_customer['customer_id'];
-    $invoice_no = mt_rand();
+    // $invoice_no = mt_rand();
+
+    $last_Order_Id = "select order_id FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
+    $query = mysqli_query($db, $last_Order_Id);
+    while($row_order = mysqli_fetch_assoc($query)){
+
+        $invoice_no = 100 + $row_order['order_id'];
+    }
+    
     $status = 'pending';
     while($row_cart = mysqli_fetch_array($run_cart)){
         $pro_id = $row_cart['p_id'];

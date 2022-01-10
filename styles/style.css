@@ -539,11 +539,18 @@ font-size: larger;}
     background-color: #22509a;
     font-family: Tempus Sans ITC;
     color: white;
-    width: 550px;
+    width: 650px;
     height: 130px;
     margin: 5px;
     margin-left: auto;
     margin-right: auto;
   }
+
+.invoiceWidth{
+    padding-right: 507px;
+    padding-left: 507px;
+    color: #22509a;
+    font-family: Maiandra GD;
+}
 
 /* styling the label finish */

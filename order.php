@@ -15,8 +15,12 @@ if(isset($_GET['c_id'])){
 $ip_add = getRealIpUser();
 
 $status = "pending";
+// $invoice_no = mt_rand();
+$last_Order_Id = "select MAX(order_id) FROM pending_orders;";
+$query = mysqli_query($conn, $last_Order_Id);
+$result = mysqli_fetch_assoc($query);
+$invoice_no = intval($result);
 
-$invoice_no = mt_rand();
 
 $select_cart = "select * from cart where ip_add='$ip_add'";
 
@@ -45,7 +49,7 @@ while($row_cart = mysqli_fetch_array($run_cart)){
         $insert_pending_order = "insert into pending_orders (customer_id,invoice_no,product_id,qty,size,order_status) values ('$customer_id','$invoice_no','$pro_id','$pro_qty','$pro_size','$status')";
         
         $run_pending_order = mysqli_query($conn,$insert_pending_order);
-        
+
         $delete_cart = "delete from cart where ip_add='$ip_add'";
         
         $run_delete = mysqli_query($conn,$delete_cart);

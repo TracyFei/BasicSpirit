@@ -13,26 +13,32 @@
 <?php 
 
     $active='Invoice';
+    // addOrder($ip_add, $run_cart);
 ?>
 <style>
 body {
-  background-color: blueviolet;
+  background-color: white;
 }
 </style>
-<div class="container" style="font-family: Maiandra GD; text-align: center; color: #22509a; background-color: white; width: 800px;">
+<div class="invoiceWidth">
+<div class="container" style="font-family: Maiandra GD; text-align: center; margin: auto">
 
-<h1 style="font-size: 30px; margin:auto">INVOICE from:</h1>
+<h1 style="font-size: 30px">INVOICE from:</h1>
 
-<div class="invoiceBox" style="margin: auto;">
+<div class="invoiceBox">
 <p style="font-size: 80px; margin: 5px">Basic Spirit</p> 
 </div>
-<h2 style="margin: auto;"><i>Website: https://www.basicspirit.nz<br> 
+<h2><i>Website: https://www.basicspirit.nz<br> 
 Email: mail@basicspirit.nz</i></h2>
 
 </div>
-<!-- <div class="container" style="margin-left: 0px;">
-  <h1>Date: </h1> 
-</div> -->
+<h1>Date: <?php echo date("jS \of F Y");?></h1> 
+
+</div>
+
+<div class="col-md-4 text-center"> 
+    <button id="singlebutton" name="Go Back to Main Page" class="btn btn-primary">Next Step!</button> 
+</div>
    
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
