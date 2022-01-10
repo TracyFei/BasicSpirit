@@ -718,9 +718,9 @@ function addOrder($ip_add, $run_cart) {
             
             echo "<script>alert('Your orders has been submitted, Thanks')</script>";
             
-            // echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+        // echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 
-            echo "<script>window.open('invoice.php','_self')</script>";
+        echo "<script>window.open('invoice.php','_self')</script>";
         }
         
     }
