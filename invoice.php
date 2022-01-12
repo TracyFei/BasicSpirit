@@ -59,7 +59,7 @@ Email: mail@basicspirit.nz</i></h2>
 
 </div>
 <h1>Date: <?php echo date("jS \of F Y");?></h1> 
-<h1>Invoice No: <?php echo $invoice_no?> </h1>
+<h1>Invoice No: 00<?php echo $invoice_no?> </h1>
 
 </div>
 
