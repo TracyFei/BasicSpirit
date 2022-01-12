@@ -20,8 +20,27 @@
     
     $select_invoice = "select invoice_no FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
     $run_pendingOrder = mysqli_query($conn,$select_invoice);
+    $invoiceNo = 0;
     while($invoice = mysqli_fetch_assoc($run_pendingOrder)){
-      $invoice_no = $invoice['invoice_no'] +1;
+      $invoiceNo = $invoice['invoice_no'];
+      $invoice_no = $invoiceNo +1;
+    }
+
+
+    $select_customer = "select customer_id FROM pending_orders WHERE invoice_no='$invoiceNo';";
+    $run_customer = mysqli_query($conn, $select_customer);
+    $customerId = 0;
+    while($cus_id = mysqli_fetch_assoc($run_customer)){
+      $customerId = $cus_id['customer_id'];
+    }
+
+    $select_name = "select * FROM customers WHERE customer_id = '$customerId';";
+    $run_name = mysqli_query($conn, $select_name);
+    $customer_email = "";
+    $customer_name = "";
+    while($cus_row = mysqli_fetch_array($run_name)){
+      $customer_name = $cus_row['customer_name'];
+      $customer_email = $cus_row['customer_email'];
     }
 
     $ip_add = getRealIpUser();
@@ -60,6 +79,7 @@ Email: mail@basicspirit.nz</i></h2>
 </div>
 <h1>Date: <?php echo date("jS \of F Y");?></h1> 
 <h1>Invoice No: 00<?php echo $invoice_no?> </h1>
+<h1>To: <?php echo $customer_name ?> <br> <?php echo $customer_email ?></h1>
 
 </div>
 
