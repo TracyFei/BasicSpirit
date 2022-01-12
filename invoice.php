@@ -12,12 +12,31 @@
 
 <?php 
 
-    
+// session_start();
    $active='Invoice';
     include("includes/db.php");
     include("functions/functions.php");
-    // global $db;
-    // addOrder($ip_add, $run_cart);
+    
+    $select_invoice = "select invoice_no FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
+    $run_pendingOrder = mysqli_query($conn,$select_invoice);
+    while($invoice = mysqli_fetch_assoc($run_pendingOrder)){
+      $invoice_no = $invoice['invoice_no'];
+    }
+
+    $ip_add = getRealIpUser();
+    $select_cart = "select * from cart where ip_add='$ip_add'";
+
+    $run_cart = mysqli_query($conn,$select_cart);
+    while($record=mysqli_fetch_array($run_cart)){
+      $pid = $record['p_id'];
+      $select_products = "select * from products where product_id='$pid'";
+      $run_products = mysqli_query($db,$select_products);
+      
+      while($row_products = mysqli_fetch_array($run_products)){
+        $product_title = $row_products['product_title'];
+        $product_code = $row_products['code'];
+      }
+    }
 ?>
 <style>
 body {
@@ -37,6 +56,7 @@ Email: mail@basicspirit.nz</i></h2>
 
 </div>
 <h1>Date: <?php echo date("jS \of F Y");?></h1> 
+<h1>Invoice No: <?php echo $invoice_no?> </h1>
 
 </div>
 
