@@ -13,14 +13,15 @@
 <?php 
 
 // session_start();
-   $active='Invoice';
+  //  $active='Invoice';
+  session_start();
     include("includes/db.php");
     include("functions/functions.php");
     
     $select_invoice = "select invoice_no FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
     $run_pendingOrder = mysqli_query($conn,$select_invoice);
     while($invoice = mysqli_fetch_assoc($run_pendingOrder)){
-      $invoice_no = $invoice['invoice_no'];
+      $invoice_no = $invoice['invoice_no'] +1;
     }
 
     $ip_add = getRealIpUser();
@@ -37,6 +38,8 @@
         $product_code = $row_products['code'];
       }
     }
+
+    addOrder($ip_add, $run_cart);
 ?>
 <style>
 body {

@@ -685,17 +685,23 @@ function addOrder($ip_add, $run_cart) {
     $customer_id = $row_customer['customer_id'];
     // $invoice_no = mt_rand();
 
-    $last_Order_Id = "select order_id FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
-    $query = mysqli_query($db, $last_Order_Id);
-    while($row_order = mysqli_fetch_assoc($query)){
+    // $last_Order_Id = "select order_id FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
+    // $query = mysqli_query($db, $last_Order_Id);
+    // while($row_order = mysqli_fetch_assoc($query)){
 
-        $invoice_no = 100 + $row_order['order_id'];
+    //     $invoice_no = 100 + $row_order['order_id'];
+    // }
+
+    $select_invoice = "select invoice_no FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
+    $run_pendingOrder = mysqli_query($db,$select_invoice);
+    while($invoice = mysqli_fetch_assoc($run_pendingOrder)){
+        $invoice_no = $invoice['invoice_no'] +1;
     }
 
     $status = 'pending';
     while($row_cart = mysqli_fetch_array($run_cart)){
         $pro_id = $row_cart['p_id'];
-        echo $pro_id;
+        // echo $pro_id;
         $pro_qty = $row_cart['qty'];
         $pro_size = $row_cart['size'];
         $get_products = "select * from products where product_id='$pro_id'";
@@ -720,7 +726,7 @@ function addOrder($ip_add, $run_cart) {
             
         // echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 
-        echo "<script>window.open('invoice.php','_self')</script>";
+        // echo "<script>window.open('invoice.php','_self')</script>";
         }
         
     }
