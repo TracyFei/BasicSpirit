@@ -23,7 +23,7 @@
     $invoiceNo = 0;
     while($invoice = mysqli_fetch_assoc($run_pendingOrder)){
       $invoiceNo = $invoice['invoice_no'];
-      $invoice_no = $invoiceNo +1;
+      // $invoice_no = $invoiceNo +1;
     }
 
 
@@ -43,22 +43,37 @@
       $customer_email = $cus_row['customer_email'];
     }
 
-    $ip_add = getRealIpUser();
-    $select_cart = "select * from cart where ip_add='$ip_add'";
+    
+    
 
-    $run_cart = mysqli_query($conn,$select_cart);
-    while($record=mysqli_fetch_array($run_cart)){
-      $pid = $record['p_id'];
-      $select_products = "select * from products where product_id='$pid'";
-      $run_products = mysqli_query($db,$select_products);
+    // $i = 0;    
+    // // $a = 0;
+    // $ip_add = getRealIpUser();
+    // $select_cart = "select * from cart where ip_add='$ip_add'";
+
+    // $run_cart = mysqli_query($conn,$select_cart);
+    // $qty = 0;
+    // $price = 0;
+    // $product_title = "";
+    // $product_code = "";
+    
+    // while($record=mysqli_fetch_array($run_cart)){
+    //   $pid = $record['p_id'];
+    //   $qty = $record['qty'];
+    //   $price = $record['p_price'];
+    //   $select_products = "select * from products where product_id='$pid'";
+    //   $run_products = mysqli_query($db,$select_products);
+
       
-      while($row_products = mysqli_fetch_array($run_products)){
-        $product_title = $row_products['product_title'];
-        $product_code = $row_products['code'];
-      }
-    }
-
-    addOrder($ip_add, $run_cart);
+      
+    //   while($row_products = mysqli_fetch_array($run_products)){
+    //     $product_title = $row_products['product_title'];
+    //     $product_code = $row_products['code'];
+    //     // $a++;
+    //   }
+    //   $i++;
+    //   } 
+    // addOrder($ip_add, $run_cart);
 ?>
 <style>
 body {
@@ -80,6 +95,55 @@ Email: mail@basicspirit.nz</i></h2>
 <h1>Date: <?php echo date("jS \of F Y");?></h1> 
 <h1>Invoice No: 00<?php echo $invoice_no?> </h1>
 <h1>To: <?php echo $customer_name ?> <br> <?php echo $customer_email ?></h1>
+<h2>Particulars: </h2>
+<div class="table-responsive"><!--  table-responsive Begin  -->
+    
+    <table class="table table-bordered table-hover"><!--  table table-bordered table-hover Begin  -->
+        
+        <thead><!--  thead Begin  -->
+            
+            <tr><!--  tr Begin  -->
+                <th>Product Code:</th>
+                <th> Product Name: </th>
+                <th> Qty: </th>
+                <th> Price: </th>
+                
+            </tr><!--  tr Finish  -->
+            
+        </thead><!--  thead Finish  -->
+        
+        <tbody><!--  tbody Begin  -->
+        <?php 
+
+        $get_orders = "select * from customer_orders where invoice_no='$invoiceNo'";
+        $run_orders = mysqli_query($conn, $get_orders);
+        $product_code = "";
+        $i = 0;
+        while ($orders = mysqli_fetch_array($run_orders)){
+          $product_code = $orders['pro_code'];
+          $get_product_name = "select product_title from products where code='$product_code';";
+          $run_pro_name = mysqli_query($conn, $get_product_name);
+          $product_title = mysqli_fetch_assoc($run_pro_name);
+          $product_name = $product_title['product_title'];
+          $i++;
+        }
+        
+        ?>
+            <tr><!--  tr Begin  -->
+                
+                <td> <?php echo $product_code; ?> </td>
+                <!-- <td> <?php echo $product_title; ?> </td>
+                <td> <?php echo $qty; ?> </td>
+                <td> $<?php echo number_format((float)$price, 2, '.', ''); ?> </td> -->
+                
+            </tr><!--  tr Finish  -->
+            
+        </tbody><!--  tbody Finish  -->
+        
+    </table><!--  table table-bordered table-hover Finish  -->
+    
+</div><!--  table-responsive Finish  -->
+
 
 </div>
 
