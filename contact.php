@@ -105,9 +105,9 @@
                         //     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
                             // More headers. From is required, rest other headers are optional
-                            $headers = 'From: ' . $receiver_email . '<' . $sender_email . '>';
+                        //     $headers = 'From: ' . $receiver_email . '<' . $sender_email . '>';
 
-                           mail($receiver_email,$sender_subject,$sender_message,$headers,$sender_email);
+                        //    mail($receiver_email,$sender_subject,$sender_message,$headers,$sender_email);
                            
                            //Auto reply to sender with this ///
                            
@@ -124,13 +124,48 @@
                            
                         //    mail($sender_email,$subject,$msg,$header,$from);
                            
-                           echo "<h2 align='center'> Your message has sent sucessfully </h2>";
+                        //    echo "<h2 align='center'> Your message has sent sucessfully </h2>";
 
                            // It is mandatory to set the content-type when sending HTML email
-                            
+                           sendClientMsg($sender_email, $sender_subject, $sender_message);
                            sendAutoReply($sender_email);
                        }
                        
+                       function sendClientMsg($senderAddress, $subject, $msg)
+                       {
+                           $mail = new PHPMailer(true);
+                           try {
+                               //Server settings
+                               // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                               $mail->isSMTP();                                            //Send using SMTP
+                               $mail->Host       = 'mailx.freeparking.co.nz';                     //Set the SMTP server to send through
+                               $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                               $mail->Username   = 'mail@basicspirit.nz';                     //SMTP username
+                               $mail->Password   = '14BasicSpirit28!';                               //SMTP password
+                               $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+                               $mail->Port       = 2525 ;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                           
+                               //Recipients
+                               $mail->setFrom($senderAddress);
+                               $mail->addAddress('mail@basicspirit.nz'); 
+                            //    $mail->addAddress('mail@basicspirit.nz');       //Add a recipient
+                           
+                           
+                               //Content
+                               $mail->isHTML(true);                                  //Set email format to HTML
+                               $mail->Subject = $subject;
+                               $mail->Body    = $msg;
+                            //    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                            //    $mail->AddAttachment($fileName);
+                           
+                               $mail->send();
+                               echo 'Message has been sent';
+                           } catch (Exception $e) {
+                               echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                           }
+                       }
+
+
                        function sendAutoReply($receipient)
                        {
                            $mail = new PHPMailer(true);
@@ -159,7 +194,7 @@
                             //    $mail->AddAttachment($fileName);
                            
                                $mail->send();
-                               echo 'Message has been sent';
+                               echo 'auto Message has been sent';
                            } catch (Exception $e) {
                                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                            }
