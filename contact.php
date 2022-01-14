@@ -2,7 +2,9 @@
     
     $active='Contact';
     include("includes/header.php");
-
+    require 'vendor/autoload.php';
+    use PHPMailer\PHPMailer\PHPMailer;
+                       use PHPMailer\PHPMailer\Exception;
 ?>
   
    <div id="content"><!-- #content Begin -->
@@ -107,24 +109,62 @@
 
                            mail($receiver_email,$sender_subject,$sender_message,$headers,$sender_email);
                            
-                           /// Auto reply to sender with this ///
+                           //Auto reply to sender with this ///
                            
-                        //    $email = $_POST['email'];
+                           //$email = $_POST['email'];
                            
-                        //    $subject = "Welcome to my website";
+                        //    $subject = "Auto Reply";
                            
                         //    $msg = "Thanks for sending us message. ASAP we will reply your message";
                            
                         //    $from = "mail@basicspirit.nz";
                            
-                        //    mail($email,$subject,$msg,$from);
+                        //    $header = 'From: ' . $sender_email . '<' . $from . '>';
+
+                           
+                        //    mail($sender_email,$subject,$msg,$header,$from);
                            
                            echo "<h2 align='center'> Your message has sent sucessfully </h2>";
 
                            // It is mandatory to set the content-type when sending HTML email
                             
+                           sendAutoReply($sender_email);
                        }
                        
+                       function sendAutoReply($receipient)
+                       {
+                           $mail = new PHPMailer(true);
+                           try {
+                               //Server settings
+                               // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                               $mail->isSMTP();                                            //Send using SMTP
+                               $mail->Host       = 'mailx.freeparking.co.nz';                     //Set the SMTP server to send through
+                               $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                               $mail->Username   = 'mail@basicspirit.nz';                     //SMTP username
+                               $mail->Password   = '14BasicSpirit28!';                               //SMTP password
+                               $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+                               $mail->Port       = 2525 ;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                           
+                               //Recipients
+                               $mail->setFrom('mail@basicspirit.nz');
+                               $mail->addAddress($receipient); 
+                            //    $mail->addAddress('mail@basicspirit.nz');       //Add a recipient
+                           
+                           
+                               //Content
+                               $mail->isHTML(true);                                  //Set email format to HTML
+                               $mail->Subject = 'Basic Spirit Auto Reply';
+                               $mail->Body    = 'Welcome to Basic Spirit! Thanks for contacting us. We will contact you ASAP';
+                               $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                            //    $mail->AddAttachment($fileName);
+                           
+                               $mail->send();
+                               echo 'Message has been sent';
+                           } catch (Exception $e) {
+                               echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                           }
+                       }
+
                        ?>
                        
                    </div><!-- box-header Finish -->

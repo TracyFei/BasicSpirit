@@ -93,7 +93,7 @@ Email: mail@basicspirit.nz</i></h2>
 
 </div>
 <h1>Date: <?php echo date("jS \of F Y");?></h1> 
-<h1>Invoice No: 00<?php echo $invoice_no?> </h1>
+<h1>Invoice No: 00<?php echo $invoiceNo?> </h1>
 <h1>To: <?php echo $customer_name ?> <br> <?php echo $customer_email ?></h1>
 <h2>Particulars: </h2>
 <div class="table-responsive"><!--  table-responsive Begin  -->
@@ -114,29 +114,45 @@ Email: mail@basicspirit.nz</i></h2>
         
         <tbody><!--  tbody Begin  -->
         <?php 
-
+        $i = 0;
         $get_orders = "select * from customer_orders where invoice_no='$invoiceNo'";
         $run_orders = mysqli_query($conn, $get_orders);
-        $product_code = "";
-        $i = 0;
+        // $product_code = "";
+        // $product_title = "";
+        // $qty = 0;
+        // $price = 0;
+        
         while ($orders = mysqli_fetch_array($run_orders)){
+          // $new_array[] = $orders;
+          $orderId = $orders['order_id'];
+          $customer_Id = $orders['customer_id'];
+          $price = $orders['due_amount'];
+          $invoice_number = $orders['invoice_no'];
+          $qty = $orders['qty'];
+          $size = $orders['size'];
+          $order_date = $orders['order_date'];
+          $order_status = $orders['order_status'];
           $product_code = $orders['pro_code'];
+          
           $get_product_name = "select product_title from products where code='$product_code';";
           $run_pro_name = mysqli_query($conn, $get_product_name);
-          $product_title = mysqli_fetch_assoc($run_pro_name);
-          $product_name = $product_title['product_title'];
+          $name = mysqli_fetch_assoc($run_pro_name);
+          $product_title = $name['product_title'];
+          
           $i++;
-        }
         
         ?>
             <tr><!--  tr Begin  -->
                 
                 <td> <?php echo $product_code; ?> </td>
-                <!-- <td> <?php echo $product_title; ?> </td>
+                <td> <?php echo $product_title; ?> </td>
                 <td> <?php echo $qty; ?> </td>
-                <td> $<?php echo number_format((float)$price, 2, '.', ''); ?> </td> -->
+                <td> $<?php echo number_format((float)$price, 2, '.', ''); ?> </td>
                 
             </tr><!--  tr Finish  -->
+
+            
+          <?php } ?>
             
         </tbody><!--  tbody Finish  -->
         
