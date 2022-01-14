@@ -136,11 +136,11 @@ Email: mail@basicspirit.nz</i></h2>
 
 ?> -->
 <h1 style="text-align: right;">Total: $<?php echo number_format((float)$total, 2, '.', '');?></h1>
-
+<div class="inovoiceLine"></div>
 </div>
 
 <div class="col-md-4 text-center"> 
-    <button id="invoiceBack" name="back button" class="btn btn-primary">Back to Main Page</button> 
+    <button style="align-items: center;" id="invoiceBack" name="back button" class="btn btn-primary">Back to Main Page</button> 
 </div>
 
 <script type="text/javascript">

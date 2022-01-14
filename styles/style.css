@@ -539,7 +539,7 @@ font-size: larger;}
     background-color: #22509a;
     font-family: Tempus Sans ITC;
     color: white;
-    width: 650px;
+    width: auto;
     height: 130px;
     margin: 5px;
     margin-left: auto;
@@ -551,6 +551,12 @@ font-size: larger;}
     padding-left: 507px;
     color: #22509a;
     font-family: Maiandra GD;
+}
+
+.inovoiceLine {
+    background-color: #22509a;
+    width: auto;
+    height: 30px;
 }
 
 /* styling the label finish */
