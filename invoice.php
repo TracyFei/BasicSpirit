@@ -85,6 +85,7 @@ Email: mail@basicspirit.nz</i></h2>
         <tbody><!--  tbody Begin  -->
         <?php 
         $i = 0;
+        $total = 0;
         $get_orders = "select * from customer_orders where invoice_no='$invoiceNo'";
         $run_orders = mysqli_query($conn, $get_orders);
         // $product_code = "";
@@ -108,7 +109,7 @@ Email: mail@basicspirit.nz</i></h2>
           $run_pro_name = mysqli_query($conn, $get_product_name);
           $name = mysqli_fetch_assoc($run_pro_name);
           $product_title = $name['product_title'];
-          
+          $total += $price;
           $i++;
         
         ?>
@@ -123,13 +124,18 @@ Email: mail@basicspirit.nz</i></h2>
 
             
           <?php } ?>
+
+
             
         </tbody><!--  tbody Finish  -->
         
     </table><!--  table table-bordered table-hover Finish  -->
     
 </div><!--  table-responsive Finish  -->
+<!-- <?php 
 
+?> -->
+<h1 style="text-align: right;">Total: $<?php echo number_format((float)$total, 2, '.', '');?></h1>
 
 </div>
 
