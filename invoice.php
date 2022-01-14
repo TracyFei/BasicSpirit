@@ -29,7 +29,7 @@
 
     $select_customer = "select customer_id FROM pending_orders WHERE invoice_no='$invoiceNo';";
     $run_customer = mysqli_query($conn, $select_customer);
-    $customerId = 0;
+    $customerId;
     while($cus_id = mysqli_fetch_assoc($run_customer)){
       $customerId = $cus_id['customer_id'];
     }
@@ -43,37 +43,7 @@
       $customer_email = $cus_row['customer_email'];
     }
 
-    
-    
-
-    // $i = 0;    
-    // // $a = 0;
-    // $ip_add = getRealIpUser();
-    // $select_cart = "select * from cart where ip_add='$ip_add'";
-
-    // $run_cart = mysqli_query($conn,$select_cart);
-    // $qty = 0;
-    // $price = 0;
-    // $product_title = "";
-    // $product_code = "";
-    
-    // while($record=mysqli_fetch_array($run_cart)){
-    //   $pid = $record['p_id'];
-    //   $qty = $record['qty'];
-    //   $price = $record['p_price'];
-    //   $select_products = "select * from products where product_id='$pid'";
-    //   $run_products = mysqli_query($db,$select_products);
-
-      
-      
-    //   while($row_products = mysqli_fetch_array($run_products)){
-    //     $product_title = $row_products['product_title'];
-    //     $product_code = $row_products['code'];
-    //     // $a++;
-    //   }
-    //   $i++;
-    //   } 
-    // addOrder($ip_add, $run_cart);
+  
 ?>
 <style>
 body {
@@ -125,7 +95,7 @@ Email: mail@basicspirit.nz</i></h2>
         while ($orders = mysqli_fetch_array($run_orders)){
           // $new_array[] = $orders;
           $orderId = $orders['order_id'];
-          $customer_Id = $orders['customer_id'];
+          // $customer_Id = $orders['customer_id'];
           $price = $orders['due_amount'];
           $invoice_number = $orders['invoice_no'];
           $qty = $orders['qty'];
