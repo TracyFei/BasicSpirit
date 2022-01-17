@@ -28,12 +28,16 @@
     global $db;
     $date = date('mdYhis', time());
     $fileName = './data/'.$date.'.xlsx';
-    saveInvoice($fileName);
-    sendEmail($fileName);
+    
+    
     
     unlink($fileName);
 
     addOrder($ip_add, $run_cart);
+    
+    saveInvoice();
+    
+    sendEmail($fileName);
 
     function sendEmail($fileName)
     {
@@ -60,51 +64,70 @@
             $mail->Subject = 'Here is the subject';
             $mail->Body    = 'This is the email message body <b>in bold!</b>';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-            $mail->AddAttachment($fileName);
+            $mail->AddAttachment("invoice.pdf");
         
             $mail->send();
             echo 'Message has been sent';
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
+        unlink("invoice.pdf");
     }
 
-    function saveInvoice($fileName)
+    function saveInvoice()
     {
-        global $db;
-        $ip_add = getRealIpUser();
-        $select_cart = "select * from cart where ip_add='$ip_add'";
+        // global $db;
+        // $ip_add = getRealIpUser();
+        // $select_cart = "select * from cart where ip_add='$ip_add'";
 
-        $run_cart = mysqli_query($db,$select_cart);
+        // $run_cart = mysqli_query($db,$select_cart);
 
-        $inputFileName = './data/BeautifulThings.xlsx';
-        $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileName);
-        $worksheet = $spreadsheet->getActiveSheet();
+        // $inputFileName = './data/BeautifulThings.xlsx';
+        // $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileName);
+        // $worksheet = $spreadsheet->getActiveSheet();
 
-        $row = 21;
-        while($record=mysqli_fetch_array($run_cart)){
+        // $row = 21;
+        // while($record=mysqli_fetch_array($run_cart)){
 
                  
-            global $db;
-            $pid = $record['p_id'];
-            $select_products = "select * from products where product_id='$pid'";
-            $run_products = mysqli_query($db,$select_products);
+        //     global $db;
+        //     $pid = $record['p_id'];
+        //     $select_products = "select * from products where product_id='$pid'";
+        //     $run_products = mysqli_query($db,$select_products);
             
-            while($row_products = mysqli_fetch_array($run_products)){
-                $product_title = $row_products['product_title'];
-                $product_code = $row_products['code'];
-                $worksheet->setCellValueByColumnAndRow(5, $row, $product_code);
-                $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow(6, $row, $product_title);
-            }
-            $worksheet->setCellValueByColumnAndRow(4, $row, $record['qty']);
-            $worksheet->setCellValueByColumnAndRow(7, $row, $record['p_price']);
-            $worksheet->setCellValueByColumnAndRow(8, $row, '=D'.$row.'*G'.$row);  
-            $row++;
+        //     while($row_products = mysqli_fetch_array($run_products)){
+        //         $product_title = $row_products['product_title'];
+        //         $product_code = $row_products['code'];
+        //         $worksheet->setCellValueByColumnAndRow(5, $row, $product_code);
+        //         $spreadsheet->getActiveSheet()->setCellValueByColumnAndRow(6, $row, $product_title);
+        //     }
+        //     $worksheet->setCellValueByColumnAndRow(4, $row, $record['qty']);
+        //     $worksheet->setCellValueByColumnAndRow(7, $row, $record['p_price']);
+        //     $worksheet->setCellValueByColumnAndRow(8, $row, '=D'.$row.'*G'.$row);  
+        //     $row++;
             
-        }
+        // }
 
-        $writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xlsx');
-        $writer->save($fileName);
+        // $writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xlsx');
+        // $writer->save($fileName);
+
+// Require composer autoloaduse PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf;
+
+        require_once __DIR__ . '/vendor/autoload.php';
+        // $mpdf->allow_charset_conversion=true;
+
+        // Create an instance of the class:
+        $mpdf = new \Mpdf\Mpdf();
+        // $mpdf->allow_charset_conversion = true;
+        // $mpdf->charset_in = 'iso-8859-4';
+        $a = file_get_contents("http://localhost/BasicSpirit/invoice.php");
+        // Write some HTML code:
+        $mpdf->WriteHTML(mb_convert_encoding($a, 'UTF-8', 'UTF-8'));
+
+        // Output a PDF file directly to the browser
+        $mpdf->Output('invoice.pdf');
+        
+
     }
 
 
