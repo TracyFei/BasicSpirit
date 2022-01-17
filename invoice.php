@@ -14,7 +14,10 @@
 
 // session_start();
   //  $active='Invoice';
-  session_start();
+
+use PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf;
+
+session_start();
     include("includes/db.php");
     include("functions/functions.php");
     
@@ -157,7 +160,14 @@ Pay by: Internet transfer to account: 38-9011-0325995-02 <br><br><br>
       window.open('customer/my_account.php?my_orders','_self');
     }; -->
 <!-- </script> -->
-   
+<?php 
+include("vendor/autoload.php");
+
+$mpdf = new \Mpdf\Mpdf();
+$mpdf->WriteHTML('<h1>Hello world!</h1>');
+$mpdf->Output();
+
+?>
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
 
