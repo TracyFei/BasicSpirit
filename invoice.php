@@ -62,10 +62,15 @@ body {
 Email: mail@basicspirit.nz</i></h2>
 
 </div>
-<h1>Date: <?php echo date("jS \of F Y");?></h1> 
+<h1>Date: <?php 
+$date = new DateTime("now", new DateTimeZone('Pacific/Auckland') );
+echo $date->format('d/m/Y');
+// echo date("jS \of F Y");?>
+</h1> 
+
 <h1>Invoice No: 00<?php echo $invoiceNo?> </h1>
 <h1>To: <?php echo $customer_name ?> <br> <?php echo $customer_email ?></h1>
-<h2>Particulars: </h2>
+<h1>Particulars: </h1>
 <div class="table-responsive"><!--  table-responsive Begin  -->
     
     <table class="table table-bordered table-hover"><!--  table table-bordered table-hover Begin  -->
@@ -137,17 +142,21 @@ Email: mail@basicspirit.nz</i></h2>
 ?> -->
 <h1 style="text-align: right;">Total: $<?php echo number_format((float)$total, 2, '.', '');?></h1>
 <div class="inovoiceLine"></div>
+<h3>Terms: Payment within 7 days of invoice <br>
+Pay by: Internet transfer to account: 38-9011-0325995-02 <br><br><br>
+<i>Thank you and have a nice day</i> 
+</h3>
 </div>
 
-<div class="col-md-4 text-center"> 
+<!-- <div class="col-md-4 text-center"> 
     <button style="align-items: center;" id="invoiceBack" name="back button" class="btn btn-primary">Back to Main Page</button> 
 </div>
 
 <script type="text/javascript">
     document.getElementById("invoiceBack").onclick = function () {
       window.open('customer/my_account.php?my_orders','_self');
-    };
-</script>
+    }; -->
+<!-- </script> -->
    
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
