@@ -160,14 +160,20 @@ Pay by: Internet transfer to account: 38-9011-0325995-02 <br><br><br>
       window.open('customer/my_account.php?my_orders','_self');
     }; -->
 <!-- </script> -->
-<?php 
-include("vendor/autoload.php");
+<!-- <?php
 
-$mpdf = new \Mpdf\Mpdf();
-$mpdf->WriteHTML('<h1>Hello world!</h1>');
-$mpdf->Output();
+// require_once __DIR__ . '/vendor/autoload.php';
+// $mpdf = new \Mpdf\Mpdf();
 
-?>
+// $a = file_get_contents("http://localhost/BasicSpirit/invoice.php");
+// $mpdf->allow_charset_conversion=true;
+// $mpdf->charset_in='UTF-8';
+// $mpdf->WriteHTML($a);
+
+// $mpdf->Output();
+
+?> -->
+
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
 
