@@ -122,10 +122,10 @@
         // $mpdf->charset_in = 'iso-8859-4';
         
         $a = file_get_contents("http://localhost/BasicSpirit/invoice.php");
+        $mpdf->SetFont('Maiandra GD');
         // $stylesheet = file_get_contents('styles/style.css');
         // Write some HTML code:
         $mpdf->WriteHTML(mb_convert_encoding($a, 'UTF-8', 'UTF-8'));
-
         // Output a PDF file directly to the browser
         $mpdf->Output('invoice.pdf');
         

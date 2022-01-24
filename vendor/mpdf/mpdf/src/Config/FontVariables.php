@@ -101,6 +101,9 @@ class FontVariables
 					'useOTL' => 0xFF,
 					'useKashida' => 75,
 				],
+				"maiandragd" => [
+					'R' => "Maiandra GD Regular.ttf",
+				],
 				"dejavusans" => [
 					'R' => "DejaVuSans.ttf",
 					'B' => "DejaVuSans-Bold.ttf",

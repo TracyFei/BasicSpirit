@@ -51,6 +51,7 @@ session_start();
 <style>
 body {
   background-color: white;
+  font-family: Maiandra GD;
 }
 </style>
 <div class="invoiceWidth">
