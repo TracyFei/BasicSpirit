@@ -37,9 +37,9 @@
     
     saveInvoice();
     
-    sendEmail($fileName);
+    sendEmail();
 
-    function sendEmail($fileName)
+    function sendEmail()
     {
         $mail = new PHPMailer(true);
         try {
@@ -120,7 +120,9 @@
         $mpdf = new \Mpdf\Mpdf();
         // $mpdf->allow_charset_conversion = true;
         // $mpdf->charset_in = 'iso-8859-4';
+        
         $a = file_get_contents("http://localhost/BasicSpirit/invoice.php");
+        // $stylesheet = file_get_contents('styles/style.css');
         // Write some HTML code:
         $mpdf->WriteHTML(mb_convert_encoding($a, 'UTF-8', 'UTF-8'));
 

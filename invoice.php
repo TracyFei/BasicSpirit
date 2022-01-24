@@ -56,7 +56,7 @@ body {
 <div class="invoiceWidth">
 <div class="container" style="font-family: Maiandra GD; text-align: center; margin: auto">
 
-<h1 style="font-size: 30px">INVOICE from:</h1>
+<h1 style="font-size: 30px; font-family: Maiandra GD">INVOICE from:</h1>
 
 <div class="invoiceBox">
 <p style="font-size: 80px; margin: 5px">Basic Spirit</p> 
