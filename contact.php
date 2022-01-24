@@ -101,32 +101,6 @@
                            $sender_message = $_POST['message'];
 
                            $receiver_email = "mail@basicspirit.nz";
-                        //    $headers = "MIME-Version: 1.0" . "\r\n";
-                        //     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-                            // More headers. From is required, rest other headers are optional
-                        //     $headers = 'From: ' . $receiver_email . '<' . $sender_email . '>';
-
-                        //    mail($receiver_email,$sender_subject,$sender_message,$headers,$sender_email);
-                           
-                           //Auto reply to sender with this ///
-                           
-                           //$email = $_POST['email'];
-                           
-                        //    $subject = "Auto Reply";
-                           
-                        //    $msg = "Thanks for sending us message. ASAP we will reply your message";
-                           
-                        //    $from = "mail@basicspirit.nz";
-                           
-                        //    $header = 'From: ' . $sender_email . '<' . $from . '>';
-
-                           
-                        //    mail($sender_email,$subject,$msg,$header,$from);
-                           
-                        //    echo "<h2 align='center'> Your message has sent sucessfully </h2>";
-
-                           // It is mandatory to set the content-type when sending HTML email
                            sendClientMsg($sender_email, $sender_subject, $sender_message);
                            sendAutoReply($sender_email);
                        }
@@ -159,7 +133,7 @@
                             //    $mail->AddAttachment($fileName);
                            
                                $mail->send();
-                               echo 'Message has been sent';
+                               echo 'Thank you, your message has been sent'; 
                            } catch (Exception $e) {
                                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                            }
@@ -194,7 +168,7 @@
                             //    $mail->AddAttachment($fileName);
                            
                                $mail->send();
-                               echo 'auto Message has been sent';
+                               //echo 'auto Message has been sent';
                            } catch (Exception $e) {
                                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                            }
