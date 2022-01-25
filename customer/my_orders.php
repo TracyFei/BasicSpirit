@@ -53,7 +53,7 @@
             
             $customer_id = $row_customer['customer_id'];
             
-            $get_orders = "select * from customer_orders where customer_id='$customer_id'";
+            $get_orders = "select * from customer_orders where customer_id='$customer_id' ORDER BY order_id DESC;";
             
             $run_orders = mysqli_query($conn,$get_orders);
             
