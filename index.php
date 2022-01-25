@@ -122,7 +122,7 @@
                    
                    <div class="box same-height"><!-- box same-height Begin -->
                        
-                       <h3><a href="#"><?php echo $box_title; ?></a></h3>
+                       <h3 style="color: #44B37A;"><?php echo $box_title; ?></h3>
                        
                        <p> <?php echo $box_desc; ?> </p>
                        
