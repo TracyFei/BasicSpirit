@@ -37,9 +37,34 @@
     
     saveInvoice();
     
-    sendEmail();
+    $selectInvoice = "select invoice_no FROM pending_orders ORDER BY order_id DESC LIMIT 1;";
+    $runPendingOrder = mysqli_query($conn,$selectInvoice);
+    $invoice_No = 0;
+    while($invoice = mysqli_fetch_assoc($runPendingOrder)){
+      $invoice_No = $invoice['invoice_no'];
+      // $invoice_no = $invoiceNo +1;
+    }
 
-    function sendEmail()
+
+    $selectCustomer = "select customer_id FROM pending_orders WHERE invoice_no='$invoice_No';";
+    $runCustomer = mysqli_query($conn, $selectCustomer);
+    $customer_Id;
+    while($cus_id = mysqli_fetch_assoc($runCustomer)){
+      $customer_Id = $cus_id['customer_id'];
+    }
+
+    $select_name = "select * FROM customers WHERE customer_id = '$customer_Id';";
+    $run_name = mysqli_query($conn, $select_name);
+    $customerEmail = "";
+    $customer_name = "";
+    while($cus_row = mysqli_fetch_array($run_name)){
+    //   $customer_name = $cus_row['customer_name'];
+      $customerEmail = $cus_row['customer_email'];
+    }
+
+    sendEmail($customerEmail);
+
+    function sendEmail($customer_Email)
     {
         $mail = new PHPMailer(true);
         try {
@@ -55,7 +80,7 @@
         
             //Recipients
             $mail->setFrom('mail@basicspirit.nz');
-            $mail->addAddress('tracyfeiguiyu7@gmail.com'); 
+            $mail->addAddress($customer_Email); 
             $mail->addAddress('mail@basicspirit.nz');       //Add a recipient
         
         
@@ -120,7 +145,6 @@
         $mpdf = new \Mpdf\Mpdf();
         // $mpdf->allow_charset_conversion = true;
         // $mpdf->charset_in = 'iso-8859-4';
-        
         $a = file_get_contents("http://localhost/BasicSpirit/invoice.php");
         $mpdf->SetFont('Maiandra GD');
         // $stylesheet = file_get_contents('styles/style.css');
