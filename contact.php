@@ -30,11 +30,11 @@
                        
                        <center><!-- center Begin -->
                            
-                           <h2> Feel free to Contact Us</h2>
+                           <h2> Contact Us</h2>
                            
                            <p class="text-muted"><!-- text-muted Begin -->
                                
-                               If you have any questions, feel free to contact us. Our Customer Service work <strong>24/7</strong>
+                               If you have any questions, feel free to contact us.
                                
                            </p><!-- text-muted Finish -->
                            

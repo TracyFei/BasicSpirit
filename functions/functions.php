@@ -722,7 +722,7 @@ function addOrder($ip_add, $run_cart) {
             $delete_cart = "delete from cart where ip_add='$ip_add'";            
             $run_delete = mysqli_query($db,$delete_cart);
             
-            echo "<script>alert('Your orders has been submitted, Thanks')</script>";
+            echo "<script>alert('Your order has been submitted, Thanks')</script>";
             
         // echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 
