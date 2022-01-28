@@ -162,9 +162,11 @@
                            
                                //Content
                                $mail->isHTML(true);                                  //Set email format to HTML
-                               $mail->Subject = 'Basic Spirit Auto Reply';
-                               $mail->Body    = 'Welcome to Basic Spirit! Thanks for contacting us. We will contact you ASAP';
+                               $mail->Subject = 'Message Received';
+                               $mail->Body    = 'Just letting you know we have received your message and will attend to it as soon as we can.<br><br>Thank you for contacting us 
+                               and you will hear from us shortly.<br><br>Kind regards,<br><br> <img alt="Basic Spirit logo" src="cid:logo"> <br><br> The team from Basic Spirit.';
                                $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                               $mail->AddEmbeddedImage('images/basicSpiritLogo.jpg', 'logo');
                             //    $mail->AddAttachment($fileName);
                            
                                $mail->send();

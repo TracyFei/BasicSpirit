@@ -88,8 +88,8 @@
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Order Confirmation';
             $mail->Body    = 'Thank you for your order, your invoice is attached. <br> <br> Once your invoice has been paid, we will send another email when your order 
-            has been dispatched. If you have any queries, just reply to this email and we will be in touch shortly. <br><br> All the best,<br> <img alt="Basic Spirit logo" 
-            src="cid:logo"> <br> The team from Basic Spirit.';
+            has been dispatched. If you have any queries, just reply to this email and we will be in touch shortly. <br><br> All the best,<br><br> <img alt="Basic Spirit logo" 
+            src="cid:logo"> <br><br> The team from Basic Spirit.';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             $mail->AddEmbeddedImage('images/basicSpiritLogo.jpg', 'logo');
             $mail->AddAttachment("invoice.pdf");
