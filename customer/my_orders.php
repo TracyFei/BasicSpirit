@@ -95,7 +95,7 @@
                 
                 <th> <?php echo $i; ?> </th>
                 <td> $<?php echo number_format((float)$due_amount, 2, '.', ''); ?> </td>
-                <td> <?php echo $invoice_no; ?> </td>
+                <td> 00<?php echo $invoice_no; ?> </td>
                 <td><?php echo $pro_code ?></td>
                 <td> <?php echo $qty; ?> </td>
                 <!-- <td> <?php echo $size; ?> </td> -->

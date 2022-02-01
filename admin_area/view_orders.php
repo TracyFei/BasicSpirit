@@ -114,7 +114,7 @@
                             <tr><!-- tr begin -->
                                 <td> <?php echo $i; ?> </td>
                                 <td> <?php echo $customer_email; ?> </td>
-                                <td> <?php echo $invoice_no; ?></td>
+                                <td> 00<?php echo $invoice_no; ?></td>
                                 <td><?php echo $pro_code ?></td>
                                 <td> <?php echo $product_title; ?> </td>
                                 <td> <?php echo $qty; ?></td>
